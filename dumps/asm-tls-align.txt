@@ -1,0 +1,158 @@
+
+tls-align.o:     file format elf32-or1k
+
+
+Disassembly of section .text:
+
+00000000 <foo>:
+   0:	9c 21 ff f8 	l.addi r1,r1,-8
+   4:	d4 01 10 00 	l.sw 0(r1),r2
+   8:	9c 41 00 08 	l.addi r2,r1,8
+   c:	d4 01 48 04 	l.sw 4(r1),r9
+  10:	1a 20 00 00 	l.movhi r17,0x0
+			10: R_OR1K_TLS_LE_AHI16	tbss_a
+  14:	e2 31 50 00 	l.add r17,r17,r10
+  18:	86 71 00 00 	l.lwz r19,0(r17)
+			18: R_OR1K_TLS_LE_LO16	tbss_a
+  1c:	aa 20 00 21 	l.ori r17,r0,0x21
+  20:	e5 53 88 00 	l.sfgts r19,r17
+  24:	aa 20 00 01 	l.ori r17,r0,0x1
+  28:	e2 31 88 04 	l.or r17,r17,r17
+  2c:	10 00 00 03 	l.bf 38 <foo+0x38>
+  30:	15 00 00 00 	l.nop 0x0
+  34:	1a 20 00 00 	l.movhi r17,0x0
+  38:	a6 31 00 ff 	l.andi r17,r17,0xff
+  3c:	e1 71 88 04 	l.or r11,r17,r17
+  40:	84 41 00 00 	l.lwz r2,0(r1)
+  44:	85 21 00 04 	l.lwz r9,4(r1)
+  48:	9c 21 00 08 	l.addi r1,r1,8
+  4c:	44 00 48 00 	l.jr r9
+  50:	15 00 00 00 	l.nop 0x0
+
+00000054 <bar>:
+  54:	9c 21 ff e4 	l.addi r1,r1,-28
+  58:	d4 01 10 14 	l.sw 20(r1),r2
+  5c:	9c 41 00 1c 	l.addi r2,r1,28
+  60:	d4 01 48 18 	l.sw 24(r1),r9
+  64:	d7 e2 1f f0 	l.sw -16(r2),r3
+  68:	d7 e2 27 ec 	l.sw -20(r2),r4
+  6c:	86 22 ff f0 	l.lwz r17,-16(r2)
+  70:	86 31 00 00 	l.lwz r17,0(r17)
+  74:	d7 e2 8f f4 	l.sw -12(r2),r17
+  78:	86 62 ff f4 	l.lwz r19,-12(r2)
+  7c:	86 22 ff ec 	l.lwz r17,-20(r2)
+  80:	e4 13 88 00 	l.sfeq r19,r17
+  84:	10 00 00 0a 	l.bf ac <bar+0x58>
+  88:	15 00 00 00 	l.nop 0x0
+  8c:	86 22 ff ec 	l.lwz r17,-20(r2)
+  90:	d4 01 88 04 	l.sw 4(r1),r17
+  94:	86 22 ff f4 	l.lwz r17,-12(r2)
+  98:	d4 01 88 00 	l.sw 0(r1),r17
+  9c:	1a 20 00 00 	l.movhi r17,0x0
+			9c: R_OR1K_AHI16	.rodata
+  a0:	9c 71 00 00 	l.addi r3,r17,0
+			a0: R_OR1K_LO_16_IN_INSN	.rodata
+  a4:	04 00 00 00 	l.jal a4 <bar+0x50>
+			a4: R_OR1K_INSN_REL_26	printf
+  a8:	15 00 00 00 	l.nop 0x0
+  ac:	86 22 ff f0 	l.lwz r17,-16(r2)
+  b0:	86 71 00 00 	l.lwz r19,0(r17)
+  b4:	1a 20 00 00 	l.movhi r17,0x0
+			b4: R_OR1K_TLS_LE_AHI16	tbss_a
+  b8:	e2 31 50 00 	l.add r17,r17,r10
+  bc:	86 31 00 00 	l.lwz r17,0(r17)
+			bc: R_OR1K_TLS_LE_LO16	tbss_a
+  c0:	e5 53 88 00 	l.sfgts r19,r17
+  c4:	aa 20 00 01 	l.ori r17,r0,0x1
+  c8:	e2 31 88 04 	l.or r17,r17,r17
+  cc:	10 00 00 03 	l.bf d8 <bar+0x84>
+  d0:	15 00 00 00 	l.nop 0x0
+  d4:	1a 20 00 00 	l.movhi r17,0x0
+  d8:	a6 31 00 ff 	l.andi r17,r17,0xff
+  dc:	e1 71 88 04 	l.or r11,r17,r17
+  e0:	84 41 00 14 	l.lwz r2,20(r1)
+  e4:	85 21 00 18 	l.lwz r9,24(r1)
+  e8:	9c 21 00 1c 	l.addi r1,r1,28
+  ec:	44 00 48 00 	l.jr r9
+  f0:	15 00 00 00 	l.nop 0x0
+
+000000f4 <main>:
+  f4:	9c 21 ff e4 	l.addi r1,r1,-28
+  f8:	d4 01 80 10 	l.sw 16(r1),r16
+  fc:	d4 01 10 14 	l.sw 20(r1),r2
+ 100:	9c 41 00 1c 	l.addi r2,r1,28
+ 104:	d4 01 48 18 	l.sw 24(r1),r9
+ 108:	d7 e2 1f f0 	l.sw -16(r2),r3
+ 10c:	d7 e2 27 ec 	l.sw -20(r2),r4
+ 110:	1a 20 00 00 	l.movhi r17,0x0
+			110: R_OR1K_TLS_LE_AHI16	tbss_a
+ 114:	e2 31 50 00 	l.add r17,r17,r10
+ 118:	86 62 ff f0 	l.lwz r19,-16(r2)
+ 11c:	d4 11 98 00 	l.sw 0(r17),r19
+			11c: R_OR1K_TLS_LE_SLO16	tbss_a
+ 120:	1a 20 00 00 	l.movhi r17,0x0
+			120: R_OR1K_TLS_LE_AHI16	tdata_b
+ 124:	e2 31 50 00 	l.add r17,r17,r10
+ 128:	86 71 00 00 	l.lwz r19,0(r17)
+			128: R_OR1K_TLS_LE_LO16	tdata_b
+ 12c:	1a 20 00 00 	l.movhi r17,0x0
+			12c: R_OR1K_TLS_LE_AHI16	tbss_a
+ 130:	e2 31 50 00 	l.add r17,r17,r10
+ 134:	86 31 00 00 	l.lwz r17,0(r17)
+			134: R_OR1K_TLS_LE_LO16	tbss_a
+ 138:	d4 01 88 04 	l.sw 4(r1),r17
+ 13c:	d4 01 98 00 	l.sw 0(r1),r19
+ 140:	1a 20 00 00 	l.movhi r17,0x0
+			140: R_OR1K_AHI16	.rodata+0x18
+ 144:	9c 71 00 00 	l.addi r3,r17,0
+			144: R_OR1K_LO_16_IN_INSN	.rodata+0x18
+ 148:	04 00 00 00 	l.jal 148 <main+0x54>
+			148: R_OR1K_INSN_REL_26	printf
+ 14c:	15 00 00 00 	l.nop 0x0
+ 150:	04 00 00 00 	l.jal 150 <main+0x5c>
+			150: R_OR1K_INSN_REL_26	foo
+ 154:	15 00 00 00 	l.nop 0x0
+ 158:	e2 0b 58 04 	l.or r16,r11,r11
+ 15c:	1a 20 00 00 	l.movhi r17,0x0
+			15c: R_OR1K_TLS_LE_AHI16	tdata_b
+ 160:	e2 31 50 00 	l.add r17,r17,r10
+ 164:	9e 31 00 00 	l.addi r17,r17,0
+			164: R_OR1K_TLS_LE_LO16	tdata_b
+ 168:	a8 80 00 09 	l.ori r4,r0,0x9
+ 16c:	e0 71 88 04 	l.or r3,r17,r17
+ 170:	04 00 00 00 	l.jal 170 <main+0x7c>
+			170: R_OR1K_INSN_REL_26	bar
+ 174:	15 00 00 00 	l.nop 0x0
+ 178:	e2 2b 58 04 	l.or r17,r11,r11
+ 17c:	e2 10 88 00 	l.add r16,r16,r17
+ 180:	1a 20 00 00 	l.movhi r17,0x0
+			180: R_OR1K_TLS_LE_AHI16	tdata_sb
+ 184:	e2 31 50 00 	l.add r17,r17,r10
+ 188:	9e 31 00 00 	l.addi r17,r17,0
+			188: R_OR1K_TLS_LE_LO16	tdata_sb
+ 18c:	a8 80 00 08 	l.ori r4,r0,0x8
+ 190:	e0 71 88 04 	l.or r3,r17,r17
+ 194:	04 00 00 00 	l.jal 194 <main+0xa0>
+			194: R_OR1K_INSN_REL_26	bar
+ 198:	15 00 00 00 	l.nop 0x0
+ 19c:	e2 2b 58 04 	l.or r17,r11,r11
+ 1a0:	e2 10 88 00 	l.add r16,r16,r17
+ 1a4:	1a 20 00 00 	l.movhi r17,0x0
+			1a4: R_OR1K_TLS_LE_AHI16	tdata_sc
+ 1a8:	e2 31 50 00 	l.add r17,r17,r10
+ 1ac:	9e 31 00 00 	l.addi r17,r17,0
+			1ac: R_OR1K_TLS_LE_LO16	tdata_sc
+ 1b0:	a8 80 00 07 	l.ori r4,r0,0x7
+ 1b4:	e0 71 88 04 	l.or r3,r17,r17
+ 1b8:	04 00 00 00 	l.jal 1b8 <main+0xc4>
+			1b8: R_OR1K_INSN_REL_26	bar
+ 1bc:	15 00 00 00 	l.nop 0x0
+ 1c0:	e2 2b 58 04 	l.or r17,r11,r11
+ 1c4:	e2 30 88 00 	l.add r17,r16,r17
+ 1c8:	e1 71 88 04 	l.or r11,r17,r17
+ 1cc:	86 01 00 10 	l.lwz r16,16(r1)
+ 1d0:	84 41 00 14 	l.lwz r2,20(r1)
+ 1d4:	85 21 00 18 	l.lwz r9,24(r1)
+ 1d8:	9c 21 00 1c 	l.addi r1,r1,28
+ 1dc:	44 00 48 00 	l.jr r9
+ 1e0:	15 00 00 00 	l.nop 0x0

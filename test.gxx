@@ -1,0 +1,45 @@
+#!/bin/bash
+
+DIR=`dirname $0`
+TEST=$1
+if [ -z $TEST ] ; then
+  echo "usage: $1 <test.C>"
+  exit 1
+fi
+
+CC=or1k-elf-g++
+if [[ $0 == *"gcc"* ]] ; then
+  echo "using gcc"
+  CC=or1k-elf-gcc
+fi
+
+execute() {
+  echo "exec: $@"
+  $@
+}
+
+execute $CC -DDEBUG=1 -Og -g \
+  -mnewlib -mboard=or1ksim $DIR/gcc/gcc/testsuite/$TEST
+
+if which or1k-elf-g++ | grep -q gnu-toolchain ; then
+  tc="local"
+else
+  tc="system"
+fi
+or1k-elf-objdump -d a.out > $tc.asm
+sed -e 's/.*://' $tc.asm > $tc.raw
+
+or1k-elf-run --trace-linenum=on a.out 2>&1 | grep jal > $tc.trace
+
+or1k-elf-run a.out
+res=$?
+
+if [ $res != 0 ] ; then
+  echo "Test failed running debugger..."
+  or1k-elf-gdb \
+    -ex 'target sim' \
+    -ex 'load' \
+    -ex 'b abort' \
+    -ex 'r' \
+    -ex 'bt' a.out
+fi

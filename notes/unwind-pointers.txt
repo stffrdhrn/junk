@@ -1,0 +1,34 @@
+
+# Structs
+_Unwind_Context                    - unwind-dw2.c (opaque)
+_Unwind_FrameState                 - unwind-dw2.h
+_Unwind_Reason_Code                - unwind-generic.h
+dwarf_eh_bases                     - unwind-dw2-fde.h
+
+
+# Calls
+__cxa_throw                        - unwind-dw2.c
+ _Unwind_RaiseException            - unwind.inc
+  uw_init_context_1                - unwind-dw2.c
+    __builtin_extract_return_addr  ? gcc/builtins.def > gcc/builtins.c > gcc/except.c
+  uw_frame_state_for               - unwind-dw2.c
+    _Unwind_Find_FDE               - unwind-dw2-fde.c
+    extract_cie_info               - unwind-dw2.c
+
+# Itanium ABI
+ _Unwind_* and friends are part of the itanium abi.
+ https://itanium-cxx-abi.github.io/cxx-abi/abi-eh.html
+
+##
+  show watchpoints
+    info breakpoints
+
+    watch $r9 if $r9 == 0x14798
+
+    break  _Unwind_RaiseException
+
+  Disable watchpoints
+    disable 4
+
+  Display vairables always
+    display

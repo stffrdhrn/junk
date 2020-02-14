@@ -1,0 +1,290 @@
+
+tls-align:     file format elf32-or1k
+
+
+Disassembly of section .plt:
+
+00002244 <.plt>:
+    2244:	19 80 00 00 	l.movhi r12,0x0
+    2248:	85 ec 60 10 	l.lwz r15,24592(r12)
+    224c:	44 00 78 00 	l.jr r15
+    2250:	85 8c 60 0c 	l.lwz r12,24588(r12)
+    2254:	19 80 00 00 	l.movhi r12,0x0
+    2258:	85 8c 60 14 	l.lwz r12,24596(r12)
+    225c:	44 00 60 00 	l.jr r12
+    2260:	a9 60 00 00 	l.ori r11,r0,0x0
+    2264:	19 80 00 00 	l.movhi r12,0x0
+    2268:	85 8c 60 18 	l.lwz r12,24600(r12)
+    226c:	44 00 60 00 	l.jr r12
+    2270:	a9 60 00 0c 	l.ori r11,r0,0xc
+
+Disassembly of section .text:
+
+00002274 <_start>:
+    2274:	a9 09 00 00 	l.ori r8,r9,0x0
+    2278:	d7 e1 0f fc 	l.sw -4(r1),r1
+    227c:	84 81 00 00 	l.lwz r4,0(r1)
+    2280:	9c a1 00 04 	l.addi r5,r1,4
+    2284:	18 60 00 00 	l.movhi r3,0x0
+    2288:	a8 63 24 8c 	l.ori r3,r3,0x248c
+    228c:	18 c0 00 00 	l.movhi r6,0x0
+    2290:	a8 c6 25 7c 	l.ori r6,r6,0x257c
+    2294:	18 e0 00 00 	l.movhi r7,0x0
+    2298:	a8 e7 26 50 	l.ori r7,r7,0x2650
+    229c:	9c 21 ff fc 	l.addi r1,r1,-4
+    22a0:	e0 40 00 00 	l.add r2,r0,r0
+    22a4:	e1 20 00 00 	l.add r9,r0,r0
+    22a8:	03 ff ff ef 	l.j 2264 <.plt+0x20>
+    22ac:	15 00 00 00 	l.nop 0x0
+
+000022b0 <deregister_tm_clones>:
+    22b0:	18 60 00 00 	l.movhi r3,0x0
+    22b4:	9c 63 60 08 	l.addi r3,r3,24584
+    22b8:	1a 20 00 00 	l.movhi r17,0x0
+    22bc:	9e 31 60 08 	l.addi r17,r17,24584
+    22c0:	e4 11 18 00 	l.sfeq r17,r3
+    22c4:	10 00 00 09 	l.bf 22e8 <deregister_tm_clones+0x38>
+    22c8:	1a 20 00 00 	l.movhi r17,0x0
+    22cc:	1a 60 00 00 	l.movhi r19,0x0
+    22d0:	9e 31 00 00 	l.addi r17,r17,0
+    22d4:	e4 11 98 00 	l.sfeq r17,r19
+    22d8:	10 00 00 04 	l.bf 22e8 <deregister_tm_clones+0x38>
+    22dc:	15 00 00 00 	l.nop 0x0
+    22e0:	44 00 88 00 	l.jr r17
+    22e4:	15 00 00 00 	l.nop 0x0
+    22e8:	44 00 48 00 	l.jr r9
+    22ec:	15 00 00 00 	l.nop 0x0
+
+000022f0 <register_tm_clones>:
+    22f0:	18 60 00 00 	l.movhi r3,0x0
+    22f4:	9c 63 60 08 	l.addi r3,r3,24584
+    22f8:	1a 20 00 00 	l.movhi r17,0x0
+    22fc:	9e 31 60 08 	l.addi r17,r17,24584
+    2300:	aa 60 00 02 	l.ori r19,r0,0x2
+    2304:	aa a0 00 1f 	l.ori r21,r0,0x1f
+    2308:	e2 31 18 02 	l.sub r17,r17,r3
+    230c:	e2 71 98 88 	l.sra r19,r17,r19
+    2310:	e0 91 a8 48 	l.srl r4,r17,r21
+    2314:	e0 84 98 00 	l.add r4,r4,r19
+    2318:	aa 20 00 01 	l.ori r17,r0,0x1
+    231c:	e0 84 88 88 	l.sra r4,r4,r17
+    2320:	1a 60 00 00 	l.movhi r19,0x0
+    2324:	e4 04 98 00 	l.sfeq r4,r19
+    2328:	10 00 00 08 	l.bf 2348 <register_tm_clones+0x58>
+    232c:	1a 20 00 00 	l.movhi r17,0x0
+    2330:	9e 31 00 00 	l.addi r17,r17,0
+    2334:	e4 11 98 00 	l.sfeq r17,r19
+    2338:	10 00 00 04 	l.bf 2348 <register_tm_clones+0x58>
+    233c:	15 00 00 00 	l.nop 0x0
+    2340:	44 00 88 00 	l.jr r17
+    2344:	15 00 00 00 	l.nop 0x0
+    2348:	44 00 48 00 	l.jr r9
+    234c:	15 00 00 00 	l.nop 0x0
+
+00002350 <__do_global_dtors_aux>:
+    2350:	9c 21 ff f8 	l.addi r1,r1,-8
+    2354:	d4 01 80 00 	l.sw 0(r1),r16
+    2358:	1a 00 00 00 	l.movhi r16,0x0
+    235c:	8e 30 60 1c 	l.lbz r17,24604(r16)
+    2360:	1a 60 00 00 	l.movhi r19,0x0
+    2364:	e4 31 98 00 	l.sfne r17,r19
+    2368:	10 00 00 06 	l.bf 2380 <__do_global_dtors_aux+0x30>
+    236c:	d4 01 48 04 	l.sw 4(r1),r9
+    2370:	07 ff ff d0 	l.jal 22b0 <deregister_tm_clones>
+    2374:	15 00 00 00 	l.nop 0x0
+    2378:	aa 20 00 01 	l.ori r17,r0,0x1
+    237c:	d9 90 88 1c 	l.sb 24604(r16),r17
+    2380:	86 01 00 00 	l.lwz r16,0(r1)
+    2384:	85 21 00 04 	l.lwz r9,4(r1)
+    2388:	44 00 48 00 	l.jr r9
+    238c:	9c 21 00 08 	l.addi r1,r1,8
+
+00002390 <frame_dummy>:
+    2390:	03 ff ff d8 	l.j 22f0 <register_tm_clones>
+    2394:	15 00 00 00 	l.nop 0x0
+
+00002398 <foo>:
+    2398:	9c 21 ff f8 	l.addi r1,r1,-8
+    239c:	d4 01 10 00 	l.sw 0(r1),r2
+    23a0:	9c 41 00 08 	l.addi r2,r1,8
+    23a4:	d4 01 48 04 	l.sw 4(r1),r9
+    23a8:	1a 20 00 00 	l.movhi r17,0x0
+    23ac:	e2 31 50 00 	l.add r17,r17,r10
+    23b0:	86 71 00 2c 	l.lwz r19,44(r17)
+    23b4:	aa 20 00 21 	l.ori r17,r0,0x21
+    23b8:	e5 53 88 00 	l.sfgts r19,r17
+    23bc:	aa 20 00 01 	l.ori r17,r0,0x1
+    23c0:	e2 31 88 04 	l.or r17,r17,r17
+    23c4:	10 00 00 03 	l.bf 23d0 <foo+0x38>
+    23c8:	15 00 00 00 	l.nop 0x0
+    23cc:	1a 20 00 00 	l.movhi r17,0x0
+    23d0:	a6 31 00 ff 	l.andi r17,r17,0xff
+    23d4:	e1 71 88 04 	l.or r11,r17,r17
+    23d8:	84 41 00 00 	l.lwz r2,0(r1)
+    23dc:	85 21 00 04 	l.lwz r9,4(r1)
+    23e0:	9c 21 00 08 	l.addi r1,r1,8
+    23e4:	44 00 48 00 	l.jr r9
+    23e8:	15 00 00 00 	l.nop 0x0
+
+000023ec <bar>:
+    23ec:	9c 21 ff e4 	l.addi r1,r1,-28
+    23f0:	d4 01 10 14 	l.sw 20(r1),r2
+    23f4:	9c 41 00 1c 	l.addi r2,r1,28
+    23f8:	d4 01 48 18 	l.sw 24(r1),r9
+    23fc:	d7 e2 1f f0 	l.sw -16(r2),r3
+    2400:	d7 e2 27 ec 	l.sw -20(r2),r4
+    2404:	86 22 ff f0 	l.lwz r17,-16(r2)
+    2408:	86 31 00 00 	l.lwz r17,0(r17)
+    240c:	d7 e2 8f f4 	l.sw -12(r2),r17
+    2410:	86 62 ff f4 	l.lwz r19,-12(r2)
+    2414:	86 22 ff ec 	l.lwz r17,-20(r2)
+    2418:	e4 13 88 00 	l.sfeq r19,r17
+    241c:	10 00 00 0a 	l.bf 2444 <bar+0x58>
+    2420:	15 00 00 00 	l.nop 0x0
+    2424:	86 22 ff ec 	l.lwz r17,-20(r2)
+    2428:	d4 01 88 04 	l.sw 4(r1),r17
+    242c:	86 22 ff f4 	l.lwz r17,-12(r2)
+    2430:	d4 01 88 00 	l.sw 0(r1),r17
+    2434:	1a 20 00 00 	l.movhi r17,0x0
+    2438:	9c 71 26 5c 	l.addi r3,r17,9820
+    243c:	07 ff ff 86 	l.jal 2254 <.plt+0x10>
+    2440:	15 00 00 00 	l.nop 0x0
+    2444:	86 22 ff f0 	l.lwz r17,-16(r2)
+    2448:	86 71 00 00 	l.lwz r19,0(r17)
+    244c:	1a 20 00 00 	l.movhi r17,0x0
+    2450:	e2 31 50 00 	l.add r17,r17,r10
+    2454:	86 31 00 2c 	l.lwz r17,44(r17)
+    2458:	e5 53 88 00 	l.sfgts r19,r17
+    245c:	aa 20 00 01 	l.ori r17,r0,0x1
+    2460:	e2 31 88 04 	l.or r17,r17,r17
+    2464:	10 00 00 03 	l.bf 2470 <bar+0x84>
+    2468:	15 00 00 00 	l.nop 0x0
+    246c:	1a 20 00 00 	l.movhi r17,0x0
+    2470:	a6 31 00 ff 	l.andi r17,r17,0xff
+    2474:	e1 71 88 04 	l.or r11,r17,r17
+    2478:	84 41 00 14 	l.lwz r2,20(r1)
+    247c:	85 21 00 18 	l.lwz r9,24(r1)
+    2480:	9c 21 00 1c 	l.addi r1,r1,28
+    2484:	44 00 48 00 	l.jr r9
+    2488:	15 00 00 00 	l.nop 0x0
+
+0000248c <main>:
+    248c:	9c 21 ff e4 	l.addi r1,r1,-28
+    2490:	d4 01 80 10 	l.sw 16(r1),r16
+    2494:	d4 01 10 14 	l.sw 20(r1),r2
+    2498:	9c 41 00 1c 	l.addi r2,r1,28
+    249c:	d4 01 48 18 	l.sw 24(r1),r9
+    24a0:	d7 e2 1f f0 	l.sw -16(r2),r3
+    24a4:	d7 e2 27 ec 	l.sw -20(r2),r4
+    24a8:	1a 20 00 00 	l.movhi r17,0x0
+    24ac:	e2 31 50 00 	l.add r17,r17,r10
+    24b0:	86 62 ff f0 	l.lwz r19,-16(r2)
+    24b4:	d4 11 98 2c 	l.sw 44(r17),r19
+    24b8:	1a 20 00 00 	l.movhi r17,0x0
+    24bc:	e2 31 50 00 	l.add r17,r17,r10
+    24c0:	86 71 00 0c 	l.lwz r19,12(r17)
+    24c4:	1a 20 00 00 	l.movhi r17,0x0
+    24c8:	e2 31 50 00 	l.add r17,r17,r10
+    24cc:	86 31 00 2c 	l.lwz r17,44(r17)
+    24d0:	d4 01 88 04 	l.sw 4(r1),r17
+    24d4:	d4 01 98 00 	l.sw 0(r1),r19
+    24d8:	1a 20 00 00 	l.movhi r17,0x0
+    24dc:	9c 71 26 74 	l.addi r3,r17,9844
+    24e0:	07 ff ff 5d 	l.jal 2254 <.plt+0x10>
+    24e4:	15 00 00 00 	l.nop 0x0
+    24e8:	07 ff ff ac 	l.jal 2398 <foo>
+    24ec:	15 00 00 00 	l.nop 0x0
+    24f0:	e2 0b 58 04 	l.or r16,r11,r11
+    24f4:	1a 20 00 00 	l.movhi r17,0x0
+    24f8:	e2 31 50 00 	l.add r17,r17,r10
+    24fc:	9e 31 00 0c 	l.addi r17,r17,12
+    2500:	a8 80 00 09 	l.ori r4,r0,0x9
+    2504:	e0 71 88 04 	l.or r3,r17,r17
+    2508:	07 ff ff b9 	l.jal 23ec <bar>
+    250c:	15 00 00 00 	l.nop 0x0
+    2510:	e2 2b 58 04 	l.or r17,r11,r11
+    2514:	e2 10 88 00 	l.add r16,r16,r17
+    2518:	1a 20 00 00 	l.movhi r17,0x0
+    251c:	e2 31 50 00 	l.add r17,r17,r10
+    2520:	9e 31 00 10 	l.addi r17,r17,16
+    2524:	a8 80 00 08 	l.ori r4,r0,0x8
+    2528:	e0 71 88 04 	l.or r3,r17,r17
+    252c:	07 ff ff b0 	l.jal 23ec <bar>
+    2530:	15 00 00 00 	l.nop 0x0
+    2534:	e2 2b 58 04 	l.or r17,r11,r11
+    2538:	e2 10 88 00 	l.add r16,r16,r17
+    253c:	1a 20 00 00 	l.movhi r17,0x0
+    2540:	e2 31 50 00 	l.add r17,r17,r10
+    2544:	9e 31 00 1c 	l.addi r17,r17,28
+    2548:	a8 80 00 07 	l.ori r4,r0,0x7
+    254c:	e0 71 88 04 	l.or r3,r17,r17
+    2550:	07 ff ff a7 	l.jal 23ec <bar>
+    2554:	15 00 00 00 	l.nop 0x0
+    2558:	e2 2b 58 04 	l.or r17,r11,r11
+    255c:	e2 30 88 00 	l.add r17,r16,r17
+    2560:	e1 71 88 04 	l.or r11,r17,r17
+    2564:	86 01 00 10 	l.lwz r16,16(r1)
+    2568:	84 41 00 14 	l.lwz r2,20(r1)
+    256c:	85 21 00 18 	l.lwz r9,24(r1)
+    2570:	9c 21 00 1c 	l.addi r1,r1,28
+    2574:	44 00 48 00 	l.jr r9
+    2578:	15 00 00 00 	l.nop 0x0
+
+0000257c <__libc_csu_init>:
+    257c:	9c 21 ff e4 	l.addi r1,r1,-28
+    2580:	d4 01 80 00 	l.sw 0(r1),r16
+    2584:	d4 01 90 04 	l.sw 4(r1),r18
+    2588:	d4 01 a0 08 	l.sw 8(r1),r20
+    258c:	d4 01 b0 0c 	l.sw 12(r1),r22
+    2590:	d4 01 c0 10 	l.sw 16(r1),r24
+    2594:	d4 01 d0 14 	l.sw 20(r1),r26
+    2598:	d4 01 48 18 	l.sw 24(r1),r9
+    259c:	04 00 00 02 	l.jal 25a4 <__libc_csu_init+0x28>
+    25a0:	1a 80 00 00 	l.movhi r20,0x0
+    25a4:	aa 94 3a 64 	l.ori r20,r20,0x3a64
+    25a8:	e2 94 48 00 	l.add r20,r20,r9
+    25ac:	e3 43 18 04 	l.or r26,r3,r3
+    25b0:	e3 04 20 04 	l.or r24,r4,r4
+    25b4:	e2 c5 28 04 	l.or r22,r5,r5
+    25b8:	1a 40 00 00 	l.movhi r18,0x0
+    25bc:	e2 52 a0 00 	l.add r18,r18,r20
+    25c0:	9e 52 ff 2c 	l.addi r18,r18,-212
+    25c4:	1a 20 00 00 	l.movhi r17,0x0
+    25c8:	e2 31 a0 00 	l.add r17,r17,r20
+    25cc:	9e 31 ff 28 	l.addi r17,r17,-216
+    25d0:	e2 52 88 02 	l.sub r18,r18,r17
+    25d4:	aa 20 00 02 	l.ori r17,r0,0x2
+    25d8:	e2 52 88 88 	l.sra r18,r18,r17
+    25dc:	1a 00 00 00 	l.movhi r16,0x0
+    25e0:	e4 90 90 00 	l.sfltu r16,r18
+    25e4:	0c 00 00 11 	l.bnf 2628 <__libc_csu_init+0xac>
+    25e8:	15 00 00 00 	l.nop 0x0
+    25ec:	1a 20 00 00 	l.movhi r17,0x0
+    25f0:	e2 31 a0 00 	l.add r17,r17,r20
+    25f4:	9e 31 ff 28 	l.addi r17,r17,-216
+    25f8:	aa 60 00 02 	l.ori r19,r0,0x2
+    25fc:	e2 70 98 08 	l.sll r19,r16,r19
+    2600:	e2 31 98 00 	l.add r17,r17,r19
+    2604:	86 31 00 00 	l.lwz r17,0(r17)
+    2608:	e0 b6 b0 04 	l.or r5,r22,r22
+    260c:	e0 98 c0 04 	l.or r4,r24,r24
+    2610:	e0 7a d0 04 	l.or r3,r26,r26
+    2614:	48 00 88 00 	l.jalr r17
+    2618:	15 00 00 00 	l.nop 0x0
+    261c:	9e 10 00 01 	l.addi r16,r16,1
+    2620:	03 ff ff f0 	l.j 25e0 <__libc_csu_init+0x64>
+    2624:	15 00 00 00 	l.nop 0x0
+    2628:	86 01 00 00 	l.lwz r16,0(r1)
+    262c:	86 41 00 04 	l.lwz r18,4(r1)
+    2630:	86 81 00 08 	l.lwz r20,8(r1)
+    2634:	86 c1 00 0c 	l.lwz r22,12(r1)
+    2638:	87 01 00 10 	l.lwz r24,16(r1)
+    263c:	87 41 00 14 	l.lwz r26,20(r1)
+    2640:	85 21 00 18 	l.lwz r9,24(r1)
+    2644:	9c 21 00 1c 	l.addi r1,r1,28
+    2648:	44 00 48 00 	l.jr r9
+    264c:	15 00 00 00 	l.nop 0x0
+
+00002650 <__libc_csu_fini>:
+    2650:	44 00 48 00 	l.jr r9
+    2654:	15 00 00 00 	l.nop 0x0

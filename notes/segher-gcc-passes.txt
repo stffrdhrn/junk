@@ -1,0 +1,20 @@
+21:15 < segher> shorne_: nice!
+21:15 < segher> shorne_: you might want to use -fdump-{rtl,tree}-all-all as well
+21:15 < segher> it prints a lot more, which can be helpful
+21:17 < segher> predicates...  they are not only before reload; instead, constraints are not enforced before
+21:18 < segher> having more specific constraints not only "reduces the work reload needs to do", but it also results in better code, 
+                and can be needed for correctness even
+21:18 < segher> sigh.  s/constraints/predicates/
+21:19 -!- manuelschneid3r [~manuelsch@p200300D863F7144051747CB9801BBF49.dip0.t-ipconnect.de] has joined #gcc
+21:20 < segher> split pass...  split is done four or five times
+21:21 < segher> and it does not really look for insns that cannot be handled as machine instructions; instead, it just looks for any 
+                and all define_split that match and have their condition return true
+21:22 < segher> "The LRA pass code is around 22,000 lines of code." but you show the IRA code
+21:23 < segher> "IRA pass output"...  it also shows what allocation it came up with.  maybe only with -fdump-rtl-all-all though?  
+                (which is the same as -da)
+21:24 < segher> very nice, in any case.  thanks :-)
+21:25 -!- jason [~jason@80-218-116-197.dclient.hispeed.ch] has joined #gcc
+21:25 < segher> oh you may also want -dp, which annotates the asm output with rtl insn id, the insn pattern name, length and cost for 
+                the insns
+21:26 < segher> quite handy to match insns up with the rtl pass dumps
+
