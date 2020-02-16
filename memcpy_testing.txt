@@ -1,0 +1,63 @@
+< shorne@lianli ~/work/linux > or1k-elf-gcc -O2 -g -o memcpy_test.elf -mboard=de0_nano memcpy_test.c   
+< shorne@lianli ~/work/linux > sim  -t -f arch/openrisc/or1ksim.cfg memcpy_test.elf | grep -e '\(l.l\|l.s\)' | cut -d' ' -f 4 | sort | uniq -c | sort -n | tail
+
+
+Hello World
+    105 l.slli
+    169 l.sfltu
+    180 l.sfne
+    484 l.lwz
+   1106 l.sw
+   7358 l.lbz
+   7439 l.sfeqi
+
+
+byte
+   66 l.sfnei
+     97 l.slli
+    169 l.sfltu
+    457 l.lwz
+   1097 l.sw
+   2539 l.sfeqi
+  16402 l.sb
+  16548 l.sfne
+  18838 l.lbz
+
+
+byte unroll
+     98 l.slli
+    164 l.sfne    (16K less)
+    169 l.sfltu
+    461 l.lwz
+   1101 l.sw
+   2114 l.sfnei     
+   2542 l.sfeqi
+  16402 l.sb
+  18838 l.lbz
+
+word
+   69 l.sfnei
+     97 l.slli
+    164 l.sfne
+    169 l.sfltu
+   2454 l.lbz
+   2539 l.sfeqi
+   4096 l.sfgtuir6,0x3
+   4554 l.lwz
+   5194 l.sw
+
+word unroll
+     30 l.sub
+     58 l.srli
+     67 l.sfnei
+     99 l.slli
+    169 l.sfltu
+    676 l.sfne
+   2454 l.lbz
+   2542 l.sfeqi     4000 less branches
+
+   4557 l.lwz
+   5197 l.sw
+
+word unroll has much less moves
+

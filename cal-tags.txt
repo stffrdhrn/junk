@@ -1,0 +1,22 @@
+==Calendar JSP Tag==
+http://www.aoc.nrao.edu/~bwaters/pub/taglib/calendar-taglib.html
+
+   * Nice compnct
+   * Has CSS support
+
+==tg calendar==
+http://www.thogau.net/taglib/calendar/sample1.jsp
+
+   * Has labels
+   * List multiple events per day
+   * Orange Color
+
+Example:
+ <tgcalendar:calendar requestURI="/sample1.jsp" name="tgCalEvents" styleId="tgcalBig"/>
+
+==Calendar taglib==
+http://www.servletsuite.com/servlets/caltag.htm
+
+   * Plain Calander
+   * Lots of options
+   * Compact

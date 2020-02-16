@@ -1,0 +1,1434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>iGolfScorecard.com</title>
+<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<style type="text/css" media="screen">@import "iui/iui.css";</style>
+<style type="text/css" media="screen">@import "inc/jdm.css";</style>
+<script type="application/x-javascript" src="iui/iui.js"></script>
+<script type="application/x-javascript" src="inc/jdm.js"></script>
+</head>
+
+<body>
+
+    <div class="toolbar">
+        <h1 id="pageTitle"></h1>
+        <a id="backButton" class="button" href="#"></a>
+	         <a class="button" href="#loginForm">Login</a>
+	     </div>
+
+    <div id="home" class="panel" title="iGolfScorecard" selected="true">
+	 <h2>Welcome Guest</h2>
+	 <a class="buttonOrange" href="#createacct">Create Account</a>	 <!-- Check for JavaScript -->
+	 <noscript>
+        <fieldset>
+      	     <div class="row">
+		 <p align="center">iGolfScorecard.com currently requires JavaScript. To enable JavaScript, tap<br />on the Settings icon from your iPhone's Home screen. Tap on Safari and then switch JavaScript, so it is ON.</p>
+            </div>
+        </fieldset>
+	 </noscript>
+	 <!-- Check for JavaScript -->
+        <fieldset>
+      	      <div class="row"><ul>
+                        <li><a href="#courseinfo" onclick="javascript:calcPar();"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Course Information</a></li>
+		        <li id="scorecard">
+		 	   <ul>
+			      <li><a href="#viewfront9"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Holes #1 - #9</a></li>
+			      <li><a href="#viewback9"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Holes #10 - #18</a></li>
+                              <li><a href="#alltotals" onclick="javascript:updatetot();"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Overall Totals</a></li>
+			      <li><a href="removecard.php"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Remove Scorecard</a></li>
+			    </ul></li>
+			<li><a href="#createacct"><img src="iui/circleArrowG.png" alt="" border="0" style="float: right;" /><img src="images/button_7.png" alt="" border="0" />&nbsp;Create an Account</a></li>				
+		        <li><a href="about.php"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_1.png" alt="" border="0" />&nbsp;About iGolfScorecard</a></li>
+		    </ul>
+            </div>
+        </fieldset>
+	 <center><span class="version">Current Version 1.7.2 - Copyright 2007-2009 iGolfScorecard</span></center>
+    </div>
+
+        <div id="hole1" title="Hole # 1" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h1p1" id="h1p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h1p2" id="h1p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h1p3" id="h1p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h1p4" id="h1p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 1 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par1" id="par1" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole2" class="whiteButton">Move to Hole # 2</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole2" title="Hole # 2" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h2p1" id="h2p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h2p2" id="h2p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h2p3" id="h2p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h2p4" id="h2p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 2 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par2" id="par2" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole3" class="whiteButton">Move to Hole # 3</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole3" title="Hole # 3" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h3p1" id="h3p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h3p2" id="h3p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h3p3" id="h3p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h3p4" id="h3p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 3 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par3" id="par3" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole4" class="whiteButton">Move to Hole # 4</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole4" title="Hole # 4" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h4p1" id="h4p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h4p2" id="h4p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h4p3" id="h4p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h4p4" id="h4p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 4 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par4" id="par4" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole5" class="whiteButton">Move to Hole # 5</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole5" title="Hole # 5" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h5p1" id="h5p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h5p2" id="h5p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h5p3" id="h5p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h5p4" id="h5p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 5 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par5" id="par5" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole6" class="whiteButton">Move to Hole # 6</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole6" title="Hole # 6" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h6p1" id="h6p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h6p2" id="h6p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h6p3" id="h6p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h6p4" id="h6p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 6 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par6" id="par6" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole7" class="whiteButton">Move to Hole # 7</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole7" title="Hole # 7" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h7p1" id="h7p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h7p2" id="h7p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h7p3" id="h7p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h7p4" id="h7p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 7 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par7" id="par7" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole8" class="whiteButton">Move to Hole # 8</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole8" title="Hole # 8" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h8p1" id="h8p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h8p2" id="h8p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h8p3" id="h8p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h8p4" id="h8p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 8 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par8" id="par8" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole9" class="whiteButton">Move to Hole # 9</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole9" title="Hole # 9" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h9p1" id="h9p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h9p2" id="h9p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h9p3" id="h9p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h9p4" id="h9p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 9 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par9" id="par9" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 <a href="#front9" class="whiteButton" onclick="javascript:calcPar();javascript:updatef9();">View Front 9 Totals</a><br />	 	 	 	 <a href="#hole10" class="whiteButton">Move to Hole # 10</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole10" title="Hole # 10" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h10p1" id="h10p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h10p2" id="h10p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h10p3" id="h10p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h10p4" id="h10p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 10 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par10" id="par10" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole11" class="whiteButton">Move to Hole # 11</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole11" title="Hole # 11" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h11p1" id="h11p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h11p2" id="h11p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h11p3" id="h11p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h11p4" id="h11p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 11 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par11" id="par11" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole12" class="whiteButton">Move to Hole # 12</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole12" title="Hole # 12" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h12p1" id="h12p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h12p2" id="h12p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h12p3" id="h12p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h12p4" id="h12p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 12 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par12" id="par12" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole13" class="whiteButton">Move to Hole # 13</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole13" title="Hole # 13" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h13p1" id="h13p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h13p2" id="h13p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h13p3" id="h13p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h13p4" id="h13p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 13 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par13" id="par13" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole14" class="whiteButton">Move to Hole # 14</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole14" title="Hole # 14" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h14p1" id="h14p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h14p2" id="h14p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h14p3" id="h14p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h14p4" id="h14p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 14 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par14" id="par14" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole15" class="whiteButton">Move to Hole # 15</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole15" title="Hole # 15" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h15p1" id="h15p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h15p2" id="h15p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h15p3" id="h15p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h15p4" id="h15p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 15 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par15" id="par15" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole16" class="whiteButton">Move to Hole # 16</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole16" title="Hole # 16" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h16p1" id="h16p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h16p2" id="h16p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h16p3" id="h16p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h16p4" id="h16p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 16 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par16" id="par16" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole17" class="whiteButton">Move to Hole # 17</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole17" title="Hole # 17" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h17p1" id="h17p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h17p2" id="h17p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h17p3" id="h17p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h17p4" id="h17p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 17 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par17" id="par17" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 	 	 <a href="#hole18" class="whiteButton">Move to Hole # 18</a><br />	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	    <div id="hole18" title="Hole # 18" class="panel">        
+        <h2>Player Scores</h2>
+        <fieldset>
+	                 <div class="row">
+                <label>Player #1</label>
+		  <select name="h18p1" id="h18p1" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #2</label>
+		  <select name="h18p2" id="h18p2" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #3</label>
+		  <select name="h18p3" id="h18p3" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>            <div class="row">
+                <label>Player #4</label>
+		  <select name="h18p4" id="h18p4" size="1">
+						<option>0</option>			<option>1</option>			<option>2</option>			<option>3</option>			<option>4</option>			<option>5</option>			<option>6</option>			<option>7</option>			<option>8</option>			<option>9</option>			<option>10</option>			<option>11</option>			<option>12</option>		  </select>
+            </div>        </fieldset>
+        <h2>Hole # 18 Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>PAR</label>
+		  <select name="par18" id="par18" size="1">
+			<option>1</option>
+			<option>2</option>
+			<option selected>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		  </select>
+            </div>
+        </fieldset>
+	 	 	 <a href="#back9" class="whiteButton" onclick="javascript:updateb9();">View Back 9 Totals</a><br />	 	 <a href="#alltotals" class="whiteButton" onclick="javascript:updatetot();">Overall Totals</a><br />	 	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+	
+<script language="javascript" type="text/javascript">
+var holes=18; var players=4;
+</script>
+
+    <div id="courseinfo" title="Course Info" class="panel"> 
+        <h2>Course Name: Unknown Course</h2>
+        <fieldset>
+            <div class="row">
+                <label># of Holes</label>
+                <input type="text" name="nh" id="nhid" value="18" readonly="readonly" class="whiterow" style="width: 25%;" />
+            </div>
+            <div class="row">
+                <label># of Players</label>
+                <input type="text" name="np" id="npid" value="4" readonly="readonly" class="whiterow" style="width: 25%;" />
+            </div>
+            <div class="row">
+                <label>Total Par</label>
+                <input type="text" name="tp" id="tp" value="54" readonly="readonly" class="whiterow" style="width: 25%;" />
+            </div>
+        </fieldset>
+    </div>
+
+    <div id="front9" title="Front 9" class="panel"> 
+	        
+        <h2>Player #1's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>H1</td>
+		<td>H2</td>
+		<td>H3</td>
+		<td>H4</td>
+		<td>H5</td>
+		<td>H6</td>
+		<td>H7</td>
+		<td>H8</td>
+		<td>H9</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+				<td><div id="f9p1h1" class="num">?</div></td>
+				<td><div id="f9p1h2" class="num">?</div></td>
+				<td><div id="f9p1h3" class="num">?</div></td>
+				<td><div id="f9p1h4" class="num">?</div></td>
+				<td><div id="f9p1h5" class="num">?</div></td>
+				<td><div id="f9p1h6" class="num">?</div></td>
+				<td><div id="f9p1h7" class="num">?</div></td>
+				<td><div id="f9p1h8" class="num">?</div></td>
+				<td><div id="f9p1h9" class="num">?</div></td>
+				<td align="right"><div id="f9p1t" class="num">?</div></td>
+		</tr>
+		<tr>
+		<td colspan="8">&nbsp;</td>
+		<td>Par</td>
+		<td><div id="f9p1p" class="num">?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>       
+        <h2>Player #2's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>H1</td>
+		<td>H2</td>
+		<td>H3</td>
+		<td>H4</td>
+		<td>H5</td>
+		<td>H6</td>
+		<td>H7</td>
+		<td>H8</td>
+		<td>H9</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+				<td><div id="f9p2h1" class="num">?</div></td>
+				<td><div id="f9p2h2" class="num">?</div></td>
+				<td><div id="f9p2h3" class="num">?</div></td>
+				<td><div id="f9p2h4" class="num">?</div></td>
+				<td><div id="f9p2h5" class="num">?</div></td>
+				<td><div id="f9p2h6" class="num">?</div></td>
+				<td><div id="f9p2h7" class="num">?</div></td>
+				<td><div id="f9p2h8" class="num">?</div></td>
+				<td><div id="f9p2h9" class="num">?</div></td>
+				<td align="right"><div id="f9p2t" class="num">?</div></td>
+		</tr>
+		<tr>
+		<td colspan="8">&nbsp;</td>
+		<td>Par</td>
+		<td><div id="f9p2p" class="num">?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>       
+        <h2>Player #3's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>H1</td>
+		<td>H2</td>
+		<td>H3</td>
+		<td>H4</td>
+		<td>H5</td>
+		<td>H6</td>
+		<td>H7</td>
+		<td>H8</td>
+		<td>H9</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+				<td><div id="f9p3h1" class="num">?</div></td>
+				<td><div id="f9p3h2" class="num">?</div></td>
+				<td><div id="f9p3h3" class="num">?</div></td>
+				<td><div id="f9p3h4" class="num">?</div></td>
+				<td><div id="f9p3h5" class="num">?</div></td>
+				<td><div id="f9p3h6" class="num">?</div></td>
+				<td><div id="f9p3h7" class="num">?</div></td>
+				<td><div id="f9p3h8" class="num">?</div></td>
+				<td><div id="f9p3h9" class="num">?</div></td>
+				<td align="right"><div id="f9p3t" class="num">?</div></td>
+		</tr>
+		<tr>
+		<td colspan="8">&nbsp;</td>
+		<td>Par</td>
+		<td><div id="f9p3p" class="num">?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>       
+        <h2>Player #4's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>H1</td>
+		<td>H2</td>
+		<td>H3</td>
+		<td>H4</td>
+		<td>H5</td>
+		<td>H6</td>
+		<td>H7</td>
+		<td>H8</td>
+		<td>H9</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+				<td><div id="f9p4h1" class="num">?</div></td>
+				<td><div id="f9p4h2" class="num">?</div></td>
+				<td><div id="f9p4h3" class="num">?</div></td>
+				<td><div id="f9p4h4" class="num">?</div></td>
+				<td><div id="f9p4h5" class="num">?</div></td>
+				<td><div id="f9p4h6" class="num">?</div></td>
+				<td><div id="f9p4h7" class="num">?</div></td>
+				<td><div id="f9p4h8" class="num">?</div></td>
+				<td><div id="f9p4h9" class="num">?</div></td>
+				<td align="right"><div id="f9p4t" class="num">?</div></td>
+		</tr>
+		<tr>
+		<td colspan="8">&nbsp;</td>
+		<td>Par</td>
+		<td><div id="f9p4p" class="num">?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>        <h2>Statistics</h2>
+        <fieldset>
+            <div class="row">
+                <label>Par</label>
+                <input type="text" name="f9p" id="f9p" value="0" readonly="readonly" style="width: 25%;" />
+            </div>
+            <div class="row">
+                <label>Average</label>
+                <input type="text" name="f9a" id="f9a" value="0" readonly="readonly" style="width: 25%;" />
+            </div>
+            <div class="row">
+                <label>Net Low</label>
+                <input type="text" name="f9nl" id="f9nl" value="N/A" readonly="readonly" style="width: 25%;" />
+            </div>
+            <div class="row">
+                <label>Net High</label>
+                <input type="text" name="f9nh" id="f9nh" value="N/A" readonly="readonly" style="width: 25%;" />
+            </div>
+        </fieldset>
+	 <a href="#hole10" class="whiteButton">Move to Hole # 10</a><br />
+	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+
+    <div id="back9" title="Back 9" class="panel">
+	        
+        <h2>Player #1's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>10</td>
+		<td>11</td>
+		<td>12</td>
+		<td>13</td>
+		<td>14</td>
+		<td>15</td>
+		<td>16</td>
+		<td>17</td>
+		<td>18</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+				<td><div id="b9p1h10" class="num">?</div></td>
+				<td><div id="b9p1h11" class="num">?</div></td>
+				<td><div id="b9p1h12" class="num">?</div></td>
+				<td><div id="b9p1h13" class="num">?</div></td>
+				<td><div id="b9p1h14" class="num">?</div></td>
+				<td><div id="b9p1h15" class="num">?</div></td>
+				<td><div id="b9p1h16" class="num">?</div></td>
+				<td><div id="b9p1h17" class="num">?</div></td>
+				<td><div id="b9p1h18" class="num">?</div></td>
+				<td align="right"><div id="b9p1t" class="num">?</div></td>
+		</tr>
+		<tr>
+		<td colspan="8">&nbsp;</td>
+		<td>Par</td>
+		<td><div id="b9p1p" class="num">?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>       
+        <h2>Player #2's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>10</td>
+		<td>11</td>
+		<td>12</td>
+		<td>13</td>
+		<td>14</td>
+		<td>15</td>
+		<td>16</td>
+		<td>17</td>
+		<td>18</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+				<td><div id="b9p2h10" class="num">?</div></td>
+				<td><div id="b9p2h11" class="num">?</div></td>
+				<td><div id="b9p2h12" class="num">?</div></td>
+				<td><div id="b9p2h13" class="num">?</div></td>
+				<td><div id="b9p2h14" class="num">?</div></td>
+				<td><div id="b9p2h15" class="num">?</div></td>
+				<td><div id="b9p2h16" class="num">?</div></td>
+				<td><div id="b9p2h17" class="num">?</div></td>
+				<td><div id="b9p2h18" class="num">?</div></td>
+				<td align="right"><div id="b9p2t" class="num">?</div></td>
+		</tr>
+		<tr>
+		<td colspan="8">&nbsp;</td>
+		<td>Par</td>
+		<td><div id="b9p2p" class="num">?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>       
+        <h2>Player #3's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>10</td>
+		<td>11</td>
+		<td>12</td>
+		<td>13</td>
+		<td>14</td>
+		<td>15</td>
+		<td>16</td>
+		<td>17</td>
+		<td>18</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+				<td><div id="b9p3h10" class="num">?</div></td>
+				<td><div id="b9p3h11" class="num">?</div></td>
+				<td><div id="b9p3h12" class="num">?</div></td>
+				<td><div id="b9p3h13" class="num">?</div></td>
+				<td><div id="b9p3h14" class="num">?</div></td>
+				<td><div id="b9p3h15" class="num">?</div></td>
+				<td><div id="b9p3h16" class="num">?</div></td>
+				<td><div id="b9p3h17" class="num">?</div></td>
+				<td><div id="b9p3h18" class="num">?</div></td>
+				<td align="right"><div id="b9p3t" class="num">?</div></td>
+		</tr>
+		<tr>
+		<td colspan="8">&nbsp;</td>
+		<td>Par</td>
+		<td><div id="b9p3p" class="num">?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>       
+        <h2>Player #4's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>10</td>
+		<td>11</td>
+		<td>12</td>
+		<td>13</td>
+		<td>14</td>
+		<td>15</td>
+		<td>16</td>
+		<td>17</td>
+		<td>18</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+				<td><div id="b9p4h10" class="num">?</div></td>
+				<td><div id="b9p4h11" class="num">?</div></td>
+				<td><div id="b9p4h12" class="num">?</div></td>
+				<td><div id="b9p4h13" class="num">?</div></td>
+				<td><div id="b9p4h14" class="num">?</div></td>
+				<td><div id="b9p4h15" class="num">?</div></td>
+				<td><div id="b9p4h16" class="num">?</div></td>
+				<td><div id="b9p4h17" class="num">?</div></td>
+				<td><div id="b9p4h18" class="num">?</div></td>
+				<td align="right"><div id="b9p4t" class="num">?</div></td>
+		</tr>
+		<tr>
+		<td colspan="8">&nbsp;</td>
+		<td>Par</td>
+		<td><div id="b9p4p" class="num">?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>        <h2>Statistics</h2>
+        <fieldset>
+            <div class="row">
+                <label>Par</label>
+                <input type="text" name="b9p" id="b9p" value="0" readonly="readonly" style="width: 25%;" />
+            </div>
+            <div class="row">
+                <label>Average</label>
+                <input type="text" name="b9a" id="b9a" value="0" readonly="readonly" style="width: 25%;" />
+            </div>
+            <div class="row">
+                <label>Net Low</label>
+                <input type="text" name="b9nl" id="b9nl" value="N/A" readonly="readonly" style="width: 25%;" />
+            </div>
+            <div class="row">
+                <label>Net High</label>
+                <input type="text" name="b9nh" id="b9nh" value="N/A" readonly="readonly" style="width: 25%;" />
+            </div>
+        </fieldset>
+	 <a href="#alltotals" class="whiteButton" onclick="javascript:updatetot();">Overall Totals</a><br />
+	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+
+    <div id="alltotals" title="Overall Totals" class="panel">  
+	        
+        <h2>Player #1's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>&nbsp;</td>
+		<td>H1</td>
+		<td>H2</td>
+		<td>H3</td>
+		<td>H4</td>
+		<td>H5</td>
+		<td>H6</td>
+		<td>H7</td>
+		<td>H8</td>
+		<td>H9</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+		<td>F9:</td>
+				<td><div id="tf9p1h1" class="num">?</div></td>
+				<td><div id="tf9p1h2" class="num">?</div></td>
+				<td><div id="tf9p1h3" class="num">?</div></td>
+				<td><div id="tf9p1h4" class="num">?</div></td>
+				<td><div id="tf9p1h5" class="num">?</div></td>
+				<td><div id="tf9p1h6" class="num">?</div></td>
+				<td><div id="tf9p1h7" class="num">?</div></td>
+				<td><div id="tf9p1h8" class="num">?</div></td>
+				<td><div id="tf9p1h9" class="num">?</div></td>
+				<td align="right"><div id="tf9p1t" class="num">?</div></td>
+		</tr>
+				<tr>
+		<td>B9:</td>
+				<td><div id="tb9p1h10" class="num">?</div></td>
+				<td><div id="tb9p1h11" class="num">?</div></td>
+				<td><div id="tb9p1h12" class="num">?</div></td>
+				<td><div id="tb9p1h13" class="num">?</div></td>
+				<td><div id="tb9p1h14" class="num">?</div></td>
+				<td><div id="tb9p1h15" class="num">?</div></td>
+				<td><div id="tb9p1h16" class="num">?</div></td>
+				<td><div id="tb9p1h17" class="num">?</div></td>
+				<td><div id="tb9p1h18" class="num">?</div></td>
+				<td align="right"><div id="tb9p1t" class="num">?</div></td>
+		</tr>
+				<tr>
+		<td colspan="11"><hr width="95%"/></td>
+		</tr>
+		<tr>
+		<td colspan="8" style="text-align: right;"><div id="parp1p" class="num">Par ?</div></td>
+		<td colspan="3" style="text-align: right;"><div id="totp1" class="num">Total ?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>       
+        <h2>Player #2's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>&nbsp;</td>
+		<td>H1</td>
+		<td>H2</td>
+		<td>H3</td>
+		<td>H4</td>
+		<td>H5</td>
+		<td>H6</td>
+		<td>H7</td>
+		<td>H8</td>
+		<td>H9</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+		<td>F9:</td>
+				<td><div id="tf9p2h1" class="num">?</div></td>
+				<td><div id="tf9p2h2" class="num">?</div></td>
+				<td><div id="tf9p2h3" class="num">?</div></td>
+				<td><div id="tf9p2h4" class="num">?</div></td>
+				<td><div id="tf9p2h5" class="num">?</div></td>
+				<td><div id="tf9p2h6" class="num">?</div></td>
+				<td><div id="tf9p2h7" class="num">?</div></td>
+				<td><div id="tf9p2h8" class="num">?</div></td>
+				<td><div id="tf9p2h9" class="num">?</div></td>
+				<td align="right"><div id="tf9p2t" class="num">?</div></td>
+		</tr>
+				<tr>
+		<td>B9:</td>
+				<td><div id="tb9p2h10" class="num">?</div></td>
+				<td><div id="tb9p2h11" class="num">?</div></td>
+				<td><div id="tb9p2h12" class="num">?</div></td>
+				<td><div id="tb9p2h13" class="num">?</div></td>
+				<td><div id="tb9p2h14" class="num">?</div></td>
+				<td><div id="tb9p2h15" class="num">?</div></td>
+				<td><div id="tb9p2h16" class="num">?</div></td>
+				<td><div id="tb9p2h17" class="num">?</div></td>
+				<td><div id="tb9p2h18" class="num">?</div></td>
+				<td align="right"><div id="tb9p2t" class="num">?</div></td>
+		</tr>
+				<tr>
+		<td colspan="11"><hr width="95%"/></td>
+		</tr>
+		<tr>
+		<td colspan="8" style="text-align: right;"><div id="parp2p" class="num">Par ?</div></td>
+		<td colspan="3" style="text-align: right;"><div id="totp2" class="num">Total ?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>       
+        <h2>Player #3's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>&nbsp;</td>
+		<td>H1</td>
+		<td>H2</td>
+		<td>H3</td>
+		<td>H4</td>
+		<td>H5</td>
+		<td>H6</td>
+		<td>H7</td>
+		<td>H8</td>
+		<td>H9</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+		<td>F9:</td>
+				<td><div id="tf9p3h1" class="num">?</div></td>
+				<td><div id="tf9p3h2" class="num">?</div></td>
+				<td><div id="tf9p3h3" class="num">?</div></td>
+				<td><div id="tf9p3h4" class="num">?</div></td>
+				<td><div id="tf9p3h5" class="num">?</div></td>
+				<td><div id="tf9p3h6" class="num">?</div></td>
+				<td><div id="tf9p3h7" class="num">?</div></td>
+				<td><div id="tf9p3h8" class="num">?</div></td>
+				<td><div id="tf9p3h9" class="num">?</div></td>
+				<td align="right"><div id="tf9p3t" class="num">?</div></td>
+		</tr>
+				<tr>
+		<td>B9:</td>
+				<td><div id="tb9p3h10" class="num">?</div></td>
+				<td><div id="tb9p3h11" class="num">?</div></td>
+				<td><div id="tb9p3h12" class="num">?</div></td>
+				<td><div id="tb9p3h13" class="num">?</div></td>
+				<td><div id="tb9p3h14" class="num">?</div></td>
+				<td><div id="tb9p3h15" class="num">?</div></td>
+				<td><div id="tb9p3h16" class="num">?</div></td>
+				<td><div id="tb9p3h17" class="num">?</div></td>
+				<td><div id="tb9p3h18" class="num">?</div></td>
+				<td align="right"><div id="tb9p3t" class="num">?</div></td>
+		</tr>
+				<tr>
+		<td colspan="11"><hr width="95%"/></td>
+		</tr>
+		<tr>
+		<td colspan="8" style="text-align: right;"><div id="parp3p" class="num">Par ?</div></td>
+		<td colspan="3" style="text-align: right;"><div id="totp3" class="num">Total ?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>       
+        <h2>Player #4's Scorecard</h2>
+        <fieldset>
+            <div class="row">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		<td>&nbsp;</td>
+		<td>H1</td>
+		<td>H2</td>
+		<td>H3</td>
+		<td>H4</td>
+		<td>H5</td>
+		<td>H6</td>
+		<td>H7</td>
+		<td>H8</td>
+		<td>H9</td>
+		<td align="right">Total</td>
+		</tr>
+		<tr>
+		<td>F9:</td>
+				<td><div id="tf9p4h1" class="num">?</div></td>
+				<td><div id="tf9p4h2" class="num">?</div></td>
+				<td><div id="tf9p4h3" class="num">?</div></td>
+				<td><div id="tf9p4h4" class="num">?</div></td>
+				<td><div id="tf9p4h5" class="num">?</div></td>
+				<td><div id="tf9p4h6" class="num">?</div></td>
+				<td><div id="tf9p4h7" class="num">?</div></td>
+				<td><div id="tf9p4h8" class="num">?</div></td>
+				<td><div id="tf9p4h9" class="num">?</div></td>
+				<td align="right"><div id="tf9p4t" class="num">?</div></td>
+		</tr>
+				<tr>
+		<td>B9:</td>
+				<td><div id="tb9p4h10" class="num">?</div></td>
+				<td><div id="tb9p4h11" class="num">?</div></td>
+				<td><div id="tb9p4h12" class="num">?</div></td>
+				<td><div id="tb9p4h13" class="num">?</div></td>
+				<td><div id="tb9p4h14" class="num">?</div></td>
+				<td><div id="tb9p4h15" class="num">?</div></td>
+				<td><div id="tb9p4h16" class="num">?</div></td>
+				<td><div id="tb9p4h17" class="num">?</div></td>
+				<td><div id="tb9p4h18" class="num">?</div></td>
+				<td align="right"><div id="tb9p4t" class="num">?</div></td>
+		</tr>
+				<tr>
+		<td colspan="11"><hr width="95%"/></td>
+		</tr>
+		<tr>
+		<td colspan="8" style="text-align: right;"><div id="parp4p" class="num">Par ?</div></td>
+		<td colspan="3" style="text-align: right;"><div id="totp4" class="num">Total ?</div></td>
+		</tr>
+		</table>
+            </div>
+        </fieldset>        <h2>Statistics</h2>
+        <fieldset>
+            <div class="row">
+                <label>Par</label>
+                <input type="text" name="totp" id="totp" value="0" readonly="readonly" style="width: 25%;" />
+            </div>
+            <div class="row">
+                <label>Average</label>
+                <input type="text" name="tota" id="tota" value="0" readonly="readonly" style="width: 25%;" />
+            </div>
+            <div class="row">
+                <label>Net Low</label>
+                <input type="text" name="totnl" id="totnl" value="N/A" readonly="readonly" style="width: 25%;" />
+            </div>
+            <div class="row">
+                <label>Net High</label>
+                <input type="text" name="totnh" id="totnh" value="N/A" readonly="readonly" style="width: 25%;" />
+            </div>
+        </fieldset>
+	 	 <a href="#home" class="whiteButton">Back to Main Menu</a>
+    </div>
+
+    <div id="viewfront9" class="panel" title="Holes 1-9">
+        <fieldset>
+      	      <div class="row">
+		    <ul>
+		        <li><a href="#hole1"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #1</a></li>
+		        <li><a href="#hole2"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #2</a></li>
+		        <li><a href="#hole3"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #3</a></li>
+		        <li><a href="#hole4"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #4</a></li>
+		        <li><a href="#hole5"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #5</a></li>
+		        <li><a href="#hole6"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #6</a></li>
+		        <li><a href="#hole7"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #7</a></li>
+		        <li><a href="#hole8"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #8</a></li>
+		        <li><a href="#hole9"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #9</a></li>
+			 		        <li><a href="#front9" onclick="javascript:updatef9();"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Front 9 Totals</a></li>
+		        <li><a href="#viewback9"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;View Holes #10 - #18</a></li>
+			 		    </ul>
+            </div>
+        </fieldset>
+    </div>
+
+    <div id="viewback9" class="panel" title="Holes 10-18">
+        <fieldset>
+      	      <div class="row">
+		    <ul>
+		        <li><a href="#hole10"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #10</a></li>
+		        <li><a href="#hole11"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #11</a></li>
+		        <li><a href="#hole12"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #12</a></li>
+		        <li><a href="#hole13"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #13</a></li>
+		        <li><a href="#hole14"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #14</a></li>
+		        <li><a href="#hole15"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #15</a></li>
+		        <li><a href="#hole16"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #16</a></li>
+		        <li><a href="#hole17"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #17</a></li>
+		        <li><a href="#hole18"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Hole #18</a></li>
+		        <li><a href="#back9" onclick="javascript:updateb9();"><img src="iui/listArrow.png" alt="" border="0" style="float: right;" /><img src="images/button_5.png" alt="" border="0" />&nbsp;Back 9 Totals</a></li>
+		    </ul>
+            </div>
+        </fieldset>
+    </div>
+
+    <form id="savescores" name="savescores" title="Save Scorecard" class="panel" method="get" action="index.php">
+        <h2>Save Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>GC Name</label>
+                <input type="text" name="gcname" value="Unknown Course" />
+            </div>
+            <div class="row">
+                <label>Date</label>
+                <input type="text" name="postdate" value="2009-12-19" readonly="readonly" />
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="row">
+                <h4>We hope you enjoyed your round of golf today.<br /><br />Thank you for using iGolfScorecard!</h4>
+            </div>
+        </fieldset>
+	 <input type="hidden" name="p1s" id="p1s" value="" />
+	 <input type="hidden" name="p2s" id="p2s" value="" />
+	 <input type="hidden" name="p3s" id="p3s" value="" />
+	 <input type="hidden" name="p4s" id="p4s" value="" />
+	 <input type="hidden" name="gcpar" id="gcpar" value="" />
+	 <input type="hidden" name="nholes" value="18" />
+	 <input type="hidden" name="p1n" value="Player #1" />
+	 <input type="hidden" name="p2n" value="Player #2" />
+	 <input type="hidden" name="p3n" value="Player #3" />
+	 <input type="hidden" name="p4n" value="Player #4" />
+	 <input type="hidden" name="act" value="savecard" />
+	     </form>
+    
+    
+        <div id="createacct" title="Create Acct." class="panel">
+	 <form name="createacctForm" method="get" class="panel" action="index.php">
+        <h2>Account Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>Username:</label>
+                <input type="text" name="nuse" value="" style="width: 60%;" />
+            </div>
+            <div class="row">
+                <label>Password:</label>
+                <input type="password" name="npwd" value="" style="width: 60%;" />
+            </div>
+            <div class="row">
+                <label>Confirm:</label>
+                <input type="password" name="cpwd" value="" style="width: 60%;" />
+            </div>
+        </fieldset>
+        <h2>Contact Information</h2>
+        <fieldset>
+            <div class="row">
+                <label>Email:</label>
+                <input type="text" name="nemail" value=""  style="width: 70%;" />
+            </div>
+            <div class="row">
+                <label>Informational Emails</label>
+                <div class="toggle" id="divinfoemail" onclick="" toggled="true"><span class="thumb"></span><span class="toggleOn" id="infoemailon">ON</span><span class="toggleOff" id="infoemailoff">OFF</span></div>
+            </div>
+        </fieldset>
+	 <input type="hidden" name="act" value="createacct" />
+	 <input type="hidden" name="iem" id="iem" value="true" />
+	 <a href="javascript:pullInfoEmail();document.createacctForm.submit();" target="_top" class="whiteButton">Create Account</a>
+	 </form>
+    </div>
+    
+    <form id="loginForm" name="loginForm" class="dialog" method="get" action="index.php">
+	<fieldset>
+		<a class="button leftButton" type="cancel">Cancel</a>
+		<h1>Login</h1><br />
+		<table border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="1%">
+			<label>Username:</label>
+			</td>
+			<td width="75%">
+			<input type="text" name="luser" style="width: 75%;" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<label>Password:</label>
+			</td>
+			<td>
+			<input type="password" name="lpwd" style="width: 75%;" />
+			</td>
+		</tr>
+		</table>
+		<br />
+		<input type="hidden" name="act" value="login" />
+		<a href="javascript:document.loginForm.submit();" target="_top" class="whiteButton">Login Now</a>
+	</fieldset>
+    </form>
+
+    <form id="logoutForm" name="logoutForm" class="dialog" method="get" action="index.php">
+        <fieldset>
+            <h1>Logout</h1>
+            <a class="button leftButton" type="cancel">Cancel</a>
+	     <h4><center>If you logout, all unsaved scorecards will be lost forever.</center></h4>
+            <input type="hidden" name="act" value="logout" />
+	     <a href="javascript:document.logoutForm.submit();" target="_top" class="whiteButton">Confirm Logout</a>
+        </fieldset>
+    </form>
+</body>
+</html>
