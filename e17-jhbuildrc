@@ -1,0 +1,16 @@
+moduleset = 'e17-svn'
+modules = [ 'meta-e17-apps' ]
+
+checkoutroot = os.path.expanduser('~/work/esvn/e/trunk')
+prefix = os.path.expanduser('/opt/shorne/e17')
+
+autogenargs = ''
+autogenargs = autogenargs + ' --disable-static'
+
+makeargs = '-j2'
+
+module_autogenargs['evas'] = autogenargs + ' --enable-software3-xcb=no --enable-directfb=no --enable-fb=no --enable-gl-xll=no --enable-xrender-x11=no --enable-xrender-xcb=no --enable-software-qtopia=no --enable-image-loader-tiff=no'
+module_autogenargs['ecore'] = autogenargs + ' --disable-ecore-evas-dfb --disable-ecore-evas-fb --disable-ecore-dfb --disable-ecore-fb'
+
+os.environ['ACLOCAL'] = 'aclocal -I ' + prefix + '/share/aclocal/'
+os.environ['INSTALL'] = os.path.expanduser('/opt/shorne/local/bin/install-check')
