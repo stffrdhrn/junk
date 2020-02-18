@@ -19,6 +19,9 @@ func.o: func.c
 func.s: func.c
 	$(GXX) -O2 -fPIC -S -o func.s func.c
 
+show-segments: libfunc.so
+	$(READELF) -l libfunc.so
+
 show-relocs: libfunc.so func.o
 	$(READELF) -r func.o
 	$(READELF) -r libfunc.so
