@@ -3,6 +3,9 @@ BIN1.SRC = test_capture_subprocess.c \
 	support_subprocess.c \
 	support_capture_subprocess.c
 
+BIN2 = sigmask
+BIN2.SRC = sigmask.c
+
 WARN_EXTRA = -Werror
 
 # make CROSS_COMPILE=or1k-smh-linux-gnu-

@@ -231,6 +231,10 @@ do_subprogram (const struct test *test)
   args[argc]   = NULL;
   assert (argc < argv_size);
 
+//  printf ("%s", args[0]);
+//  for (int i = 1; args[i] != NULL; i++)
+//    printf(" %s \\\n", args[i]);
+
   return support_capture_subprogram (args[0], args);
 }
 
@@ -288,7 +292,11 @@ do_multiple_tests (enum test_type type)
 
               if (test.signal != 0)
                 {
-                  assert (WIFSIGNALED (result.status));
+                  if (!WIFSIGNALED (result.status))
+		    {
+		      fprintf (stderr, "Not signalled!\n");
+		      exit (1);
+		    }
                   assert (WTERMSIG (result.status) == test.signal);
                 }
               else
