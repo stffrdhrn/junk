@@ -1,0 +1,7 @@
+*.core
+
+build
+sigmask
+test_capture_subprocess
+strace.txt
+trace.txt
