@@ -76,12 +76,23 @@ typedef unsigned long long u64;
 //    0x4 1
 //
 static	u32 v32 = 32;
+static	unsigned char v8 = 8;
 static	u64 v64 = 64;
 
 
 int main() {
+	unsigned char t8 = 8;
         u64 t64;
         u32 t32;
+        u64 *p64;
+        u32 *p32;
+
+	__get_user(t8, &v64);
+	printf ("gu s2b: %d\n", t8);
+
+	__get_user(t64, &v8);
+	printf ("gu b2d: %ld\n", (u32) t64);
+
 
 	__get_user(t32, &v32);
 	__get_user(t64, &v64);
@@ -94,9 +105,18 @@ int main() {
 	__get_user(t64, &v32);
 	printf ("gu s2d: %ld\n", (u32) t64);
 
+	__get_user(p32, &v64);
+	printf ("gu p d2s: %ld\n", (u32) p32);
+
+	__get_user(p64, &v32);
+	printf ("gu p s2d: %ld\n", (u32) p64);
+
+
 	printf ("d2s: %ld\n", getd2s(&v64));
 	printf ("d2st: %ld\n", getd2st(&v64));
 
 	printf ("s2d: %ld\n", (u32) gets2d(&v32));
 	printf ("s2dt: %ld\n", (u32) gets2dt(&v32));
+
+	printf ("sizeof p64: %d\n", sizeof(__typeof__(p64)));
 }
