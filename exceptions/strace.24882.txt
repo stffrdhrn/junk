@@ -1,0 +1,168 @@
+24885 execve("/home/shorne/work/gnu-toolchain/build-glibc/elf/ld.so", ["/home/shorne/work/gnu-toolchain/"..., "--library-path", "/home/shorne/work/gnu-toolchain/"..., "/home/shorne/work/junk/exception"...], 0x7fd33b04 /* 12 vars */) = 0
+24885 brk(NULL)                         = 0x3002e000
+24885 openat(AT_FDCWD, "/home/shorne/work/junk/exceptions/throw-pthread-sem", O_RDONLY|O_CLOEXEC) = 3
+24885 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\2\0\\\0\0\0\1\0\0(\360\0\0\0004"..., 512) = 512
+24885 pread64(3, "\0\0\0\4\0\0\0\20\0\0\0\1GNU\0\0\0\0\0\0\0\0\5\0\0\0\4\0\0\0\0", 32, 3288) = 32
+24885 mmap2(0x2000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0x2000
+24885 mmap2(0x4000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0x4000
+24885 close(3)                          = 0
+24885 uname({sysname="Linux", nodename="buildroot", ...}) = 0
+24885 faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/math/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/math/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/math/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/math", {st_mode=S_IFDIR|0755, st_size=69632, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/elf/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/elf/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/elf/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/elf", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/dlfcn/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/dlfcn/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/dlfcn/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/dlfcn", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nss/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nss/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nss/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nss", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nis/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nis/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nis/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nis", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/rt/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/rt/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/rt/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/rt", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/resolv/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/resolv/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/resolv/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/resolv", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/mathvec/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/mathvec/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/mathvec/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/mathvec", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/support/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/support/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/support/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/support", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/crypt/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/crypt/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/crypt/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/crypt", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nptl/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nptl/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nptl/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nptl", {st_mode=S_IFDIR|0755, st_size=143360, ...}, 0) = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/sysroot/lib/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 fstatat64(AT_FDCWD, "/home/shorne/work/gnu-toolchain/sysroot/lib/tls", 0x7fbcedd4, 0) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/sysroot/lib/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+24885 read(3, "\177ELF\1\2\1\3\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\10e8\0\0\0004"..., 512) = 512
+24885 fstat64(3, {st_mode=S_IFREG|0755, st_size=14849800, ...}) = 0
+24885 mmap2(NULL, 2088504, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3002e000
+24885 mmap2(0x30222000, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f2000) = 0x30222000
+24885 mmap2(0x3022a000, 7736, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x3022a000
+24885 close(3)                          = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/math/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+24885 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\0d\\\0\0\0004"..., 512) = 512
+24885 fstat64(3, {st_mode=S_IFREG|0755, st_size=2414468, ...}) = 0
+24885 mmap2(NULL, 802892, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3022c000
+24885 mmap2(0x302ee000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc0000) = 0x302ee000
+24885 close(3)                          = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/math/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/elf/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/dlfcn/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nss/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nis/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/rt/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/resolv/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/mathvec/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/support/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/crypt/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nptl/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/sysroot/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+24885 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\0%\300\0\0\0004"..., 512) = 512
+24885 fstat64(3, {st_mode=S_IFREG|0644, st_size=560800, ...}) = 0
+24885 mmap2(NULL, 115304, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x302f2000
+24885 mmap2(0x3030c000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x3030c000
+24885 mprotect(0x7fbce000, 8192, PROT_READ|PROT_WRITE|PROT_EXEC|PROT_GROWSDOWN) = 0
+24885 close(3)                          = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/math/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/elf/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/dlfcn/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nss/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nis/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/rt/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/resolv/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/mathvec/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/support/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/crypt/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/nptl/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+24885 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\0K\270\0\0\0004"..., 512) = 512
+24885 fstat64(3, {st_mode=S_IFREG|0755, st_size=1384404, ...}) = 0
+24885 mmap2(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x30310000
+24885 mmap2(NULL, 148004, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x30314000
+24885 mmap2(0x30334000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e000) = 0x30334000
+24885 mmap2(0x30338000, 548, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x30338000
+24885 close(3)                          = 0
+24885 openat(AT_FDCWD, "/home/shorne/work/gnu-toolchain/build-glibc/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+24885 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\1_\364\0\0\0004"..., 512) = 512
+24885 fstat64(3, {st_mode=S_IFREG|0755, st_size=11144116, ...}) = 0
+24885 mmap2(NULL, 1683300, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3033a000
+24885 mprotect(0x304ce000, 8192, PROT_NONE) = 0
+24885 mmap2(0x304d0000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x194000) = 0x304d0000
+24885 mmap2(0x304d4000, 3940, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x304d4000
+24885 close(3)                          = 0
+24885 mprotect(0x304d0000, 8192, PROT_READ) = 0
+24885 mprotect(0x30334000, 8192, PROT_READ) = 0
+24885 mprotect(0x3030c000, 8192, PROT_READ) = 0
+24885 mprotect(0x302ee000, 8192, PROT_READ) = 0
+24885 mprotect(0x30222000, 24576, PROT_READ) = 0
+24885 mprotect(0x4000, 8192, PROT_READ) = 0
+24885 mprotect(0x3002a000, 8192, PROT_READ) = 0
+24885 set_tid_address(0x30310f28)       = 24885
+24885 set_robust_list(0x30310f30, 12)   = 0
+24885 rt_sigaction(SIGRTMIN, {sa_handler=0x30318270, sa_mask=[], sa_flags=SA_SIGINFO}, NULL, 8) = 0
+24885 rt_sigaction(SIGRT_1, {sa_handler=0x303183bc, sa_mask=[], sa_flags=SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
+24885 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+24885 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+24885 brk(NULL)                         = 0x3002e000
+24885 brk(0x30050000)                   = 0x3002e000
+24885 mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x304d6000
+24885 mmap2(NULL, 8396800, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x305d6000
+24885 mprotect(0x305d8000, 8388608, PROT_READ|PROT_WRITE|PROT_EXEC) = 0
+24885 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+24885 clone(child_stack=0x30dd6f04, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tid=[24886], tls=0x30dd7920, child_tidptr=0x30dd7478) = 24886
+24885 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+24886 set_robust_list(0x30dd7480, 12 <unfinished ...>
+24885 futex_time64(0x605c, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+24886 <... set_robust_list resumed>)    = 0
+24886 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+24886 futex_time64(0x605c, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+24885 <... futex_time64 resumed>)       = 0
+24886 <... futex_time64 resumed>)       = 1
+24885 clock_nanosleep_time64(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0},  <unfinished ...>
+24886 futex_time64(0x7fbcfa88, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+24885 <... clock_nanosleep_time64 resumed>0x7fbcfa64) = 0
+24885 getpid()                          = 24885
+24885 tgkill(24885, 24886, SIGRTMIN)    = 0
+24886 <... futex_time64 resumed>)       = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+24885 futex_time64(0x30dd7478, FUTEX_WAIT, 24886, NULL <unfinished ...>
+24886 --- SIGRTMIN {si_signo=SIGRTMIN, si_code=SI_TKILL, si_pid=24885, si_uid=0} ---
+24886 getpid()                          = 24885
+24886 futex_time64(0x3030e13c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+24886 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+24886 madvise(0x305d6000, 8372224, MADV_DONTNEED) = 0
+24886 exit(0)                           = ?
+24885 <... futex_time64 resumed>)       = 0
+24886 +++ exited with 0 +++
+24885 fstat64(1, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x5, 0x1), ...}) = 0
+24885 ioctl(1, TCGETS, {B115200 opost isig icanon echo ...}) = 0
+24885 write(1, "exception not caught\n", 21) = 21
+24885 exit_group(1)                     = ?
+24885 +++ exited with 1 +++

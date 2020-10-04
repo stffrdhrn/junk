@@ -1,0 +1,5 @@
+build/
+throw
+throw-pthread
+throw-pthread-sem
+*-g
