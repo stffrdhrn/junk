@@ -302,7 +302,12 @@ do_multiple_tests (enum test_type type)
               else
                 {
                   assert (WIFEXITED (result.status));
-                  assert (WEXITSTATUS (result.status) == test.status);
+		  if (!(WEXITSTATUS (result.status) == test.status))
+		    {
+		      fprintf (stderr, "Unexpected exist status result:%d expected:%d\n",
+			       WEXITSTATUS (result.status),
+			       test.status);
+		    }
                 }
 	      support_capture_subprocess_free (&result);
               free (test.out);
