@@ -1,0 +1,381 @@
+13994 07:32:03 execve("/home/shorne/work/gnu-toolchain/build-glibc/nptl/tst-cancel7", ["/home/shorne/work/gnu-toolchain/"..., "--direct"], 0x7fecfe00 /* 13 vars */) = 0
+13994 07:32:03 brk(NULL)                = 0xc000
+13994 07:32:03 uname({sysname="Linux", nodename="buildroot", ...}) = 0
+13994 07:32:03 faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+13994 07:32:03 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+13994 07:32:03 openat(AT_FDCWD, "/lib/tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+13994 07:32:03 fstatat64(AT_FDCWD, "/lib/tls", 0x7fb84ff4, 0) = -1 ENOENT (No such file or directory)
+13994 07:32:03 openat(AT_FDCWD, "/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+13994 07:32:03 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\0J8\0\0\0004"..., 512) = 512
+13994 07:32:03 fstat64(3, {st_mode=S_IFREG|0755, st_size=1380244, ...}) = 0
+13994 07:32:03 mmap2(NULL, 131620, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3002c000
+13994 07:32:03 mmap2(0x30048000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x30048000
+13994 07:32:04 mmap2(0x3004c000, 548, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x3004c000
+13994 07:32:04 close(3)                 = 0
+13994 07:32:04 openat(AT_FDCWD, "/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+13994 07:32:04 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\1b\304\0\0\0004"..., 512) = 512
+13994 07:32:04 fstat64(3, {st_mode=S_IFREG|0755, st_size=11735748, ...}) = 0
+13994 07:32:04 mmap2(NULL, 1544036, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3004e000
+13994 07:32:04 mprotect(0x301c0000, 8192, PROT_NONE) = 0
+13994 07:32:04 mmap2(0x301c2000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x172000) = 0x301c2000
+13994 07:32:04 mmap2(0x301c6000, 3940, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x301c6000
+13994 07:32:04 close(3)                 = 0
+13994 07:32:04 mmap2(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x301c8000
+13994 07:32:04 mprotect(0x301c2000, 8192, PROT_READ) = 0
+13994 07:32:04 mprotect(0x30048000, 8192, PROT_READ) = 0
+13994 07:32:04 mprotect(0x8000, 8192, PROT_READ) = 0
+13994 07:32:04 mprotect(0x30028000, 8192, PROT_READ) = 0
+13994 07:32:04 set_tid_address(0x301c8078) = 13994
+13994 07:32:04 set_robust_list(0x301c8080, 12) = 0
+13994 07:32:04 rt_sigaction(SIGRTMIN, {sa_handler=0x30030270, sa_mask=[], sa_flags=SA_SIGINFO}, NULL, 8) = 0
+13994 07:32:04 rt_sigaction(SIGRT_1, {sa_handler=0x30030388, sa_mask=[], sa_flags=SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
+13994 07:32:04 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+13994 07:32:04 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+13994 07:32:04 mmap2(NULL, 8, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_ANONYMOUS, -1, 0) = 0x301cc000
+13994 07:32:04 getpid()                 = 13994
+13994 07:32:04 clock_gettime64(CLOCK_MONOTONIC, {tv_sec=321752, tv_nsec=614371128}) = 0
+13994 07:32:04 openat(AT_FDCWD, "/tmp/tst-cancel7-xoLXIn", O_RDWR|O_CREAT|O_EXCL, 0600) = 3
+13994 07:32:04 write(3, " ", 1)         = 1
+13994 07:32:04 close(3)                 = 0
+13994 07:32:04 mmap2(NULL, 8396800, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x301ce000
+13994 07:32:04 mprotect(0x301d0000, 8388608, PROT_READ|PROT_WRITE) = 0
+13994 07:32:04 brk(NULL)                = 0xc000
+13994 07:32:04 brk(0x2e000)             = 0x2e000
+13994 07:32:04 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+13994 07:32:04 clone(child_stack=0x309cef14,
+                     flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID,
+                     parent_tid=[13995], tls=0x309cf930, child_tidptr=0x309cf488) = 13995
+13994 07:32:04 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+13994 07:32:04 clock_nanosleep_time64(CLOCK_REALTIME, 0, {tv_sec=4, tv_nsec=0},  <unfinished ...>
+  13995 07:32:04 set_robust_list(0x309cf490, 12) = 0
+  13995 07:32:04 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+  13995 07:32:04 write(1, "tf: running '/home/shorne/work/g"..., 118) = 118
+  13995 07:32:04 rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+  13995 07:32:04 rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+  13995 07:32:04 rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+  13995 07:32:04 mmap2(NULL, 40960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x309d0000
+  13995 07:32:04 rt_sigprocmask(SIG_BLOCK, ~[], [CHLD], 8) = 0
+  13995 07:32:04 clone(child_stack=0x309d9ff4, flags=CLONE_VM|CLONE_VFORK|SIGCHLD <unfinished ...>
+    13996 07:32:04 rt_sigprocmask(SIG_BLOCK, NULL, ~[KILL STOP], 8) = 0
+    13996 07:32:04 rt_sigaction(SIGHUP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGHUP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGILL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGTRAP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGTRAP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGABRT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGABRT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGBUS, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGFPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGFPE, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGUSR1, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGUSR1, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGSEGV, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGUSR2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGUSR2, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGPIPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGPIPE, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGTERM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGSTKFLT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGSTKFLT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGCHLD, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGCONT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGCONT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGTSTP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGTTIN, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGTTOU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGURG, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGURG, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGXCPU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGXCPU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGXFSZ, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGXFSZ, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGVTALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGVTALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGPROF, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGPROF, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGWINCH, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGWINCH, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGIO, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGIO, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGPWR, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGPWR, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGSYS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGSYS, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRTMIN, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_1, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_2, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_3, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_3, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_4, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_4, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_5, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_5, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_6, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_6, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_7, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_7, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_8, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_8, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_9, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_9, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_10, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_10, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_11, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_11, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_12, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_12, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_13, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_13, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_14, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_14, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_15, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_15, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_16, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_16, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_17, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_17, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_18, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_18, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_19, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_19, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_20, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_20, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_21, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_21, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_22, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_22, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_23, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_23, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:04 rt_sigaction(SIGRT_24, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_24, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_25, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_25, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_26, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_26, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_27, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_27, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_28, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_28, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_29, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_29, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_30, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_30, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_31, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_31, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_32, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGRT_32, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+    13996 07:32:05 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+    13996 07:32:05 execve("/bin/sh", ["sh", "-c", "/home/shorne/work/gnu-toolchain/"...], 0x7fb85df0 /* 13 vars */ <unfinished ...>
+  13995 07:32:05 <... clone resumed>)     = 13996
+  13995 07:32:05 munmap(0x309d0000, 40960) = 0
+  13995 07:32:05 rt_sigprocmask(SIG_SETMASK, [CHLD],  <unfinished ...>
+    13996 07:32:05 <... execve resumed>)    = 0
+  13995 07:32:05 <... rt_sigprocmask resumed>NULL, 8) = 0
+    13996 07:32:05 brk(NULL <unfinished ...>
+  13995 07:32:05 wait4(13996,  <unfinished ...>
+    13996 07:32:05 <... brk resumed>)       = 0x810a000
+    13996 07:32:05 uname({sysname="Linux", nodename="buildroot", ...}) = 0
+    13996 07:32:05 faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+    13996 07:32:05 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+    13996 07:32:05 openat(AT_FDCWD, "/lib/tls/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+    13996 07:32:05 fstatat64(AT_FDCWD, "/lib/tls", 0x7fb65004, 0) = -1 ENOENT (No such file or directory)
+    13996 07:32:05 openat(AT_FDCWD, "/lib/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+    13996 07:32:05 fstatat64(AT_FDCWD, "/lib", {st_mode=S_IFDIR|0755, st_size=700, ...}, 0) = 0
+    13996 07:32:05 openat(AT_FDCWD, "/usr/lib/tls/libreadline.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+    13996 07:32:05 fstatat64(AT_FDCWD, "/usr/lib/tls", 0x7fb65004, 0) = -1 ENOENT (No such file or directory)
+    13996 07:32:05 openat(AT_FDCWD, "/usr/lib/libreadline.so.8", O_RDONLY|O_CLOEXEC) = 3
+    13996 07:32:05 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\1\fD\0\0\0004"..., 512) = 512
+    13996 07:32:05 fstat64(3, {st_mode=S_IFREG|0755, st_size=317608, ...}) = 0
+    13996 07:32:05 mmap2(NULL, 329188, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3002c000
+    13996 07:32:05 mprotect(0x30074000, 8192, PROT_NONE) = 0
+    13996 07:32:05 mmap2(0x30076000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x48000) = 0x30076000
+    13996 07:32:05 mmap2(0x3007c000, 1508, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x3007c000
+    13996 07:32:05 close(3)                 = 0
+    13996 07:32:05 openat(AT_FDCWD, "/lib/libhistory.so.8", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+    13996 07:32:05 openat(AT_FDCWD, "/usr/lib/libhistory.so.8", O_RDONLY|O_CLOEXEC) = 3
+    13996 07:32:05 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\0\37\274\0\0\0004"..., 512) = 512
+    13996 07:32:05 fstat64(3, {st_mode=S_IFREG|0755, st_size=42316, ...}) = 0
+    13996 07:32:05 mmap2(NULL, 49668, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3007e000
+    13996 07:32:05 mmap2(0x30088000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8000) = 0x30088000
+    13996 07:32:05 close(3)                 = 0
+    13996 07:32:05 openat(AT_FDCWD, "/lib/libncurses.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+    13996 07:32:05 openat(AT_FDCWD, "/usr/lib/libncurses.so.6", O_RDONLY|O_CLOEXEC) = 3
+    13996 07:32:05 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\0\346P\0\0\0004"..., 512) = 512
+    13996 07:32:05 fstat64(3, {st_mode=S_IFREG|0755, st_size=322872, ...}) = 0
+    13996 07:32:05 mmap2(NULL, 331196, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3008c000
+    13996 07:32:05 mprotect(0x300d8000, 8192, PROT_NONE) = 0
+    13996 07:32:05 mmap2(0x300da000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4c000) = 0x300da000
+    13996 07:32:05 close(3)                 = 0
+    13996 07:32:05 openat(AT_FDCWD, "/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+    13996 07:32:05 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\0\nX\0\0\0004"..., 512) = 512
+    13996 07:32:05 fstat64(3, {st_mode=S_IFREG|0755, st_size=126116, ...}) = 0
+    13996 07:32:05 mmap2(NULL, 24756, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x300de000
+    13996 07:32:05 mmap2(0x300e2000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x300e2000
+    13996 07:32:05 close(3)                 = 0
+    13996 07:32:05 openat(AT_FDCWD, "/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+    13996 07:32:05 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\1b\304\0\0\0004"..., 512) = 512
+    13996 07:32:05 fstat64(3, {st_mode=S_IFREG|0755, st_size=11735748, ...}) = 0
+    13996 07:32:05 mmap2(NULL, 1544036, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x300e6000
+    13996 07:32:05 mprotect(0x30258000, 8192, PROT_NONE) = 0
+    13996 07:32:05 mmap2(0x3025a000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x172000) = 0x3025a000
+    13996 07:32:05 mmap2(0x3025e000, 3940, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x3025e000
+    13996 07:32:05 close(3)                 = 0
+    13996 07:32:05 mmap2(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x30260000
+    13996 07:32:05 mprotect(0x3025a000, 8192, PROT_READ) = 0
+    13996 07:32:05 mprotect(0x300e2000, 8192, PROT_READ) = 0
+    13996 07:32:05 mprotect(0x300da000, 8192, PROT_READ) = 0
+    13996 07:32:05 mprotect(0x30088000, 8192, PROT_READ) = 0
+    13996 07:32:05 mprotect(0x30076000, 8192, PROT_READ) = 0
+    13996 07:32:05 mprotect(0x80fc000, 8192, PROT_READ) = 0
+    13996 07:32:05 mprotect(0x30028000, 8192, PROT_READ) = 0
+    13996 07:32:05 openat(AT_FDCWD, "/dev/tty", O_RDWR|O_NONBLOCK) = 3
+    13996 07:32:05 close(3)                 = 0
+    13996 07:32:05 brk(NULL)                = 0x810a000
+    13996 07:32:05 brk(0x812c000)           = 0x812c000
+    13996 07:32:05 getuid()                 = 0
+    13996 07:32:05 getgid()                 = 0
+    13996 07:32:05 geteuid()                = 0
+    13996 07:32:05 getegid()                = 0
+    13996 07:32:05 rt_sigprocmask(SIG_BLOCK, NULL, [], 8) = 0
+    13996 07:32:05 clock_gettime64(CLOCK_REALTIME_COARSE, {tv_sec=1605598325, tv_nsec=623940878}) = 0
+    13996 07:32:05 ioctl(-1, TIOCGPGRP, 0x7fb65c24) = -1 EBADF (Bad file descriptor)
+    13996 07:32:05 sysinfo({uptime=321755, loads=[13056, 4960, 1376], totalram=261292032, freeram=124280832, sharedram=62185472, bufferram=0, totalswap=0, freeswap=0, procs=45, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+    13996 07:32:05 rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTART}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 rt_sigprocmask(SIG_BLOCK, NULL, [], 8) = 0
+    13996 07:32:05 rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:05 uname({sysname="Linux", nodename="buildroot", ...}) = 0
+    13996 07:32:05 fstatat64(AT_FDCWD, "/root", {st_mode=S_IFDIR|0700, st_size=60, ...}, 0) = 0
+    13996 07:32:05 fstatat64(AT_FDCWD, ".", {st_mode=S_IFDIR|0700, st_size=60, ...}, 0) = 0
+    13996 07:32:05 fstatat64(AT_FDCWD, "/root", {st_mode=S_IFDIR|0700, st_size=60, ...}, 0) = 0
+    13996 07:32:05 getpid()                 = 13996
+    13996 07:32:05 getppid()                = 13994
+    13996 07:32:05 fstatat64(AT_FDCWD, ".", {st_mode=S_IFDIR|0700, st_size=60, ...}, 0) = 0
+    13996 07:32:05 fstatat64(AT_FDCWD, "/bin/sh", {st_mode=S_IFREG|0755, st_size=1045768, ...}, 0) = 0
+    13996 07:32:05 fstatat64(AT_FDCWD, "/bin/sh", {st_mode=S_IFREG|0755, st_size=1045768, ...}, 0) = 0
+    13996 07:32:05 geteuid()                = 0
+    13996 07:32:05 getegid()                = 0
+    13996 07:32:05 getuid()                 = 0
+    13996 07:32:05 getgid()                 = 0
+    13996 07:32:05 faccessat(AT_FDCWD, "/bin/sh", X_OK) = 0
+    13996 07:32:05 fstatat64(AT_FDCWD, "/bin/sh", {st_mode=S_IFREG|0755, st_size=1045768, ...}, 0) = 0
+    13996 07:32:05 geteuid()                = 0
+    13996 07:32:05 getegid()                = 0
+    13996 07:32:05 getuid()                 = 0
+    13996 07:32:05 getgid()                 = 0
+    13996 07:32:05 faccessat(AT_FDCWD, "/bin/sh", R_OK) = 0
+    13996 07:32:05 fstatat64(AT_FDCWD, "/bin/sh", {st_mode=S_IFREG|0755, st_size=1045768, ...}, 0) = 0
+    13996 07:32:05 fstatat64(AT_FDCWD, "/bin/sh", {st_mode=S_IFREG|0755, st_size=1045768, ...}, 0) = 0
+    13996 07:32:05 geteuid()                = 0
+    13996 07:32:05 getegid()                = 0
+    13996 07:32:05 getuid()                 = 0
+    13996 07:32:05 getgid()                 = 0
+    13996 07:32:05 faccessat(AT_FDCWD, "/bin/sh", X_OK) = 0
+    13996 07:32:05 fstatat64(AT_FDCWD, "/bin/sh", {st_mode=S_IFREG|0755, st_size=1045768, ...}, 0) = 0
+    13996 07:32:05 geteuid()                = 0
+    13996 07:32:05 getegid()                = 0
+    13996 07:32:05 getuid()                 = 0
+    13996 07:32:05 getgid()                 = 0
+    13996 07:32:05 faccessat(AT_FDCWD, "/bin/sh", R_OK) = 0
+    13996 07:32:05 clock_gettime64(CLOCK_REALTIME, {tv_sec=1605598325, tv_nsec=987686638}) = 0
+    13996 07:32:05 getpid()                 = 13996
+    13996 07:32:06 getpgid(0)               = 13991
+    13996 07:32:06 ioctl(2, TIOCGPGRP, [13991]) = 0
+    13996 07:32:06 rt_sigaction(SIGCHLD, {sa_handler=0x8061aa0, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTART}, 8) = 0
+    13996 07:32:06 prlimit64(0, RLIMIT_NPROC, NULL, {rlim_cur=1736, rlim_max=1736}) = 0
+    13996 07:32:06 rt_sigprocmask(SIG_BLOCK, NULL, [], 8) = 0
+    13996 07:32:06 rt_sigprocmask(SIG_BLOCK, NULL, [], 8) = 0
+    13996 07:32:06 rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:06 rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, 8) = 0
+    13996 07:32:06 rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0x8061aa0, sa_mask=[], sa_flags=SA_RESTART}, 8) = 0
+    13996 07:32:06 execve("/home/shorne/work/gnu-toolchain/build-glibc/nptl/tst-cancel7", ["/home/shorne/work/gnu-toolchain/"..., "--direct", "--pidfile", "/tmp/tst-cancel7-xoLXIn"], 0x810e388 /* 12 vars */) = 0
+    13996 07:32:06 brk(NULL)                = 0xc000
+    13996 07:32:06 uname({sysname="Linux", nodename="buildroot", ...}) = 0
+    13996 07:32:06 faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+    13996 07:32:06 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+    13996 07:32:06 openat(AT_FDCWD, "/lib/tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+    13996 07:32:06 fstatat64(AT_FDCWD, "/lib/tls", 0x7fee2fa4, 0) = -1 ENOENT (No such file or directory)
+    13996 07:32:06 openat(AT_FDCWD, "/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+    13996 07:32:06 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\0J8\0\0\0004"..., 512) = 512
+    13996 07:32:06 fstat64(3, {st_mode=S_IFREG|0755, st_size=1380244, ...}) = 0
+    13996 07:32:06 mmap2(NULL, 131620, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3002c000
+    13996 07:32:06 mmap2(0x30048000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x30048000
+    13996 07:32:06 mmap2(0x3004c000, 548, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x3004c000
+    13996 07:32:06 close(3)                 = 0
+    13996 07:32:06 openat(AT_FDCWD, "/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+    13996 07:32:06 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\1b\304\0\0\0004"..., 512) = 512
+    13996 07:32:06 fstat64(3, {st_mode=S_IFREG|0755, st_size=11735748, ...}) = 0
+    13996 07:32:06 mmap2(NULL, 1544036, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3004e000
+    13996 07:32:06 mprotect(0x301c0000, 8192, PROT_NONE) = 0
+    13996 07:32:06 mmap2(0x301c2000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x172000) = 0x301c2000
+    13996 07:32:06 mmap2(0x301c6000, 3940, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x301c6000
+    13996 07:32:06 close(3)                 = 0
+    13996 07:32:06 mmap2(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x301c8000
+    13996 07:32:06 mprotect(0x301c2000, 8192, PROT_READ) = 0
+    13996 07:32:06 mprotect(0x30048000, 8192, PROT_READ) = 0
+    13996 07:32:06 mprotect(0x8000, 8192, PROT_READ) = 0
+    13996 07:32:06 mprotect(0x30028000, 8192, PROT_READ) = 0
+    13996 07:32:06 set_tid_address(0x301c8078) = 13996
+    13996 07:32:06 set_robust_list(0x301c8080, 12) = 0
+    13996 07:32:06 rt_sigaction(SIGRTMIN, {sa_handler=0x30030270, sa_mask=[], sa_flags=SA_SIGINFO}, NULL, 8) = 0
+    13996 07:32:06 rt_sigaction(SIGRT_1, {sa_handler=0x30030388, sa_mask=[], sa_flags=SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
+    13996 07:32:06 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+    13996 07:32:06 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+    13996 07:32:06 mmap2(NULL, 8, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_ANONYMOUS, -1, 0) = 0x301cc000
+    13996 07:32:06 brk(NULL)                = 0xc000
+    13996 07:32:06 brk(0x2e000)             = 0x2e000
+    13996 07:32:06 openat(AT_FDCWD, "/tmp/tst-cancel7-xoLXIn", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+    13996 07:32:06 getpid()                 = 13996
+    13996 07:32:06 fstat64(3, {st_mode=S_IFREG|0600, st_size=0, ...}) = 0
+    13996 07:32:06 write(3, "13996\n", 6)   = 6
+    13996 07:32:06 fcntl64(3, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+    13996 07:32:06 rt_sigsuspend(~[RTMIN RT_1], 8 <unfinished ...>
+13994 07:32:08 <... clock_nanosleep_time64 resumed>0x7fb85c14) = 0
+13994 07:32:08 faccessat(AT_FDCWD, "/tmp/tst-cancel7-xoLXIn", R_OK) = 0
+13994 07:32:08 write(1, "Cancelling pidfile thread.", 26) = 26
+13994 07:32:08 write(1, "\n", 1)        = 1
+13994 07:32:08 openat(AT_FDCWD, "/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+13994 07:32:08 read(3, "\177ELF\1\2\1\0\0\0\0\0\0\0\0\0\0\3\0\\\0\0\0\1\0\0%\300\0\0\0004"..., 512) = 512
+13994 07:32:08 fstat64(3, {st_mode=S_IFREG|0644, st_size=558252, ...}) = 0
+13994 07:32:08 mmap2(NULL, 115304, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x309d0000
+13994 07:32:08 mmap2(0x309ea000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x309ea000
+13994 07:32:08 mprotect(0x30028000, 7012, PROT_READ|PROT_WRITE) = 0
+13994 07:32:08 mprotect(0x30028000, 7012, PROT_READ) = 0
+13994 07:32:08 mprotect(0x7fb84000, 8192, PROT_READ|PROT_WRITE|PROT_EXEC|PROT_GROWSDOWN) = 0
+13994 07:32:08 mprotect(0x301d0000, 8388608, PROT_READ|PROT_WRITE|PROT_EXEC) = 0
+13994 07:32:08 close(3)                 = 0
+13994 07:32:08 mprotect(0x309ea000, 8192, PROT_READ) = 0
+13994 07:32:08 getpid()                 = 13994
+
+## Try to kill self thread group, failing with ESRCH
+13994 07:32:08 tgkill(13994, 65535, SIGRTMIN) = -1 ESRCH (No such process)
+13994 07:32:08 write(1, "error: xpthread_check_return.c:3"..., 35) = 35
+13994 07:32:08 write(1, "pthread_cancel: No such process", 31) = 31
+13994 07:32:08 write(1, "\n", 1)        = 1
+13994 07:32:08 exit_group(1)            = ?
+  13995 07:32:08 <... wait4 resumed> <unfinished ...>) = ?
+  13995 07:32:08 +++ exited with 1 +++
+13994 07:32:08 +++ exited with 1 +++
