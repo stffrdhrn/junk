@@ -40,4 +40,12 @@ the child tid does not get set to -1.
 
 ## Solution
 
-Not figured out yet
+The __or1k_cancel assembly wrapper had code to set TID to -1
+when CLONE_VM arg was set.
+
+Removing this code solved the issue.
+
+To detect this I wrote a nifty qemu plugin 'tracewatch.c'.
+
+Run QEMU with argument:
+  "-plugin $QEMU/tests/plugin/libtracewatch.so,arg=store,arg=addr,arg=0x30007478,arg=addr_mask,arg=0xf000ffff,arg=tracepath,arg=-"
